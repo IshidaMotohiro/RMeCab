@@ -1,0 +1,9 @@
+
+## comment out variables if you dont have these libs:
+
+
+MECAB = -lmecab
+
+PKG_LIBS = $(MECAB)
+PKG_CPPFLAGS = -I.
+

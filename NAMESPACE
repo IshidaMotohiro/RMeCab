@@ -1,0 +1,32 @@
+
+useDynLib(RMeCab)
+
+export(RMeCabC)
+
+export(RMeCabDF)
+
+export(RMeCabFreq)
+
+export(RMeCabText)
+
+export(RMeCabDoc)
+
+export(docVector, docMatrix, print.docMatrix)
+
+export(RMeCabMx)
+
+export(Ngram)
+
+export(collocate)
+
+export(collScores)
+
+## export( rmSign)
+
+export( entropy, localTF, localBin, localLogTF,globalIDF, globalIDF2,  globalIDF3, globalEntropy, removeInfo, mynorm, coOccurrence )
+
+export(docNgram, makeNgram, NgramDF)
+
+export(docMatrixDF)
+
+export(docNgram2, NgramDF2, docMatrix2, docDF, docNgramDF, rmSign)

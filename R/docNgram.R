@@ -14,7 +14,13 @@ makeNgram <-
    ##      dic <- paste(" -u", dic)
    ##    }
    ## }
-    
+
+      if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
+          mecabrc = ""
+      } else {
+          mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
+      }
+      
     dummy <- Ngram(filename, type, N, pos, dic, mecabrc, etc)
     dummy$Text <- rep(basename(filename), length(dummy$Freq))
      if(length(dummy) < 1){

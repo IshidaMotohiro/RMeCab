@@ -12,12 +12,6 @@ docVector <-
       minFreq <- 1
     }
 
-    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
-        mecabrc = ""
-    } else {
-        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
-    }
-
 
     dummy <- RMeCabMx(filename, pos, posN, minFreq, kigo, dic, mecabrc, etc )  
     if(length(dummy) < 1){
@@ -47,11 +41,6 @@ docMatrix <-
       posN <- length(pos)
     }
 
-    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
-        mecabrc = ""
-    } else {
-        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
-    }
 
     ## if( is.null(dic) || is.na(dic)){
     ##   dic = ""

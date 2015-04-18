@@ -24,7 +24,6 @@ function(filename, mypref = 1, kigo = 0,  dic = "", mecabrc = "", etc = ""   ){
    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
      mecabrc = ""
    } else {
-       mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
      if ( !(file.exists(mecabrc)) )
        {
          cat ("specified mecabrc not found; result by default mecabrc.\n")

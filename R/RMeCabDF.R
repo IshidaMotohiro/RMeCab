@@ -4,11 +4,6 @@ RMeCabDF <-
       stop("the first argument must be a data frame!")
     }
 
-    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
-        mecabrc = ""
-    } else {
-        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
-    }
 
     ## if( is.null(dic) || is.na(dic)){
     ##   dic = ""

@@ -47,7 +47,6 @@ filename <- paste(dirname(filename), basename(filename), sep = "/")
    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
      mecabrc = ""
    } else {
-       mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
      if ( !(file.exists(mecabrc)) )
        {
          cat ("specified mecabrc not found; results by default mecabrc.\n")

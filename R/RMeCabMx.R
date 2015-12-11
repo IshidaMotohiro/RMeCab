@@ -28,7 +28,7 @@ function(filename, pos, posN, minFreq = 1, kigo = 0,  dic = "", mecabrc = "", et
    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
      mecabrc = ""
    } else {
-       mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
+# 2015 12 11        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
      if ( !(file.exists(mecabrc)) )
        {
          cat ("specified mecabrc not found; result by default mecabrc.\n")

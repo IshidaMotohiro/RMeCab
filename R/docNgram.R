@@ -18,7 +18,7 @@ makeNgram <-
       if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
           mecabrc = ""
       } else {
-          mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
+# 2015 12 11           mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
       }
       
     dummy <- Ngram(filename, type, N, pos, dic, mecabrc, etc)

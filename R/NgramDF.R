@@ -3,7 +3,7 @@
 
 NgramDF <-
   function(filename, type = 0, N = 2, pos = "Default",  dic = "", mecabrc = "", etc = ""   ){# pos = c("名詞","形容詞")
-filename <- paste(dirname(filename), basename(filename), sep = "/")
+# 2015 12 11 filename <- paste(dirname(filename), basename(filename), sep = "/")
 #    gc()
     if(! file.exists(filename)){
       stop("file not found")
@@ -47,7 +47,7 @@ filename <- paste(dirname(filename), basename(filename), sep = "/")
    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
      mecabrc = ""
    } else {
-       mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
+# 2015 12 11        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
      if ( !(file.exists(mecabrc)) )
        {
          cat ("specified mecabrc not found; results by default mecabrc.\n")

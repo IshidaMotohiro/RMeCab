@@ -3,7 +3,7 @@
 collocate <-
 function(filename, node, span = 3,  dic = "", mecabrc = "", etc = "" ){
 #   gc()
-    filename <- paste(dirname(filename), basename(filename), sep = "/")
+# 2015 12 11     filename <- paste(dirname(filename), basename(filename), sep = "/")
    if(! file.exists(filename)){
      stop("file not found")
    }
@@ -33,7 +33,7 @@ function(filename, node, span = 3,  dic = "", mecabrc = "", etc = "" ){
    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
      mecabrc = ""
    } else {
-       mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
+# 2015 12 11        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
      if ( !(file.exists(mecabrc)) )
        {
          cat ("specified mecabrc not found; result by default mecabrc.\n")

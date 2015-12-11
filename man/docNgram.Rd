@@ -18,7 +18,7 @@
   \item{filename}{ a file }
   \item{type}{ Default being 0.  }
   \item{N}{N-gram. Default being 2}
-  \item{pos}{part of speach. Default being  noun and adjective.}
+  \item{pos}{part of speech. Default being  noun and adjective.}
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
   \item{mecabrc}{ to specify mecab resource file }
   \item{etc}{other options to mecab}  

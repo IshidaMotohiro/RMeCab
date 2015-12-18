@@ -31,10 +31,12 @@ extern "C" {
 	int typeSet  = INTEGER_VALUE( type );// pos の数
 	int Ngram  = INTEGER_VALUE( N );// 最小頻度の数
 	int mFreq = 2;
-	char  input[10240];// 2010 12 17 ;// [5120] = { 0 };//char  input[5120] = { 0 };
+	char  input[BUF4];// [10240];// 2010 12 17 ;// [5120] = { 0 };//char  input[5120] = { 0 };
+	memset (input, 0, sizeof input); // 2015 12 18
 	//	char  input2[5120] = { 0 };
 	
-	wchar_t  wbuf [10240];// 2010 12 17 ;// [5120] = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+	wchar_t  wbuf [BUF4];// [10240];// 2010 12 17 ;// [5120] = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+	memset (wbuf, 0, sizeof wbuf); // 2015 12 18
 	FILE *fp;
 	char * p;
 	int i, j, n, nn, z, xx ;

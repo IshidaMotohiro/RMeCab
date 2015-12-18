@@ -31,7 +31,8 @@ extern "C"{
 	const char* word = CHAR(STRING_ELT(target,0));
 	const char* dic = CHAR(STRING_ELT(mydic, 0));//指定辞書
 	
-	char  input[BUF4] = { 0 };//	char  input[5120] = { 0 };
+	char  input[BUF4] ;//= { 0 };//	char  input[5120] = { 0 };
+	memset (input, 0, sizeof input) ; // 2015 12 18
 	
 	mecab_t *mecab;
 	mecab_node_t *node;

@@ -17,7 +17,8 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
  char *p;
 	
 	
-  wchar_t  wbuf [BUF4] = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+ wchar_t  wbuf [BUF4] ;// = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+ memset (wbuf, 0, sizeof wbuf); // 2015 12 18
   unsigned int  wz = 0;
 	
   string target;

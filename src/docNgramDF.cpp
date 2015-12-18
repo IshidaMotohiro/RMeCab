@@ -69,7 +69,8 @@ extern "C" {
 	SEXP ans, dim, dimnames, row_names, col_names;
 	
 	
-	wchar_t  wbuf [BUF4] = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+	wchar_t  wbuf [BUF4];// = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+	memset(wbuf, 0, sizeof wbuf);// 2015 12 18
 	list <string> strL;
 	list <string>::iterator iter;
 	

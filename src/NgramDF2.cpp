@@ -35,6 +35,7 @@ extern "C" {
 	int f_count = INTEGER_VALUE( fileN );// 最小頻度の数
 	// const char* KIGO = CHAR(STRING_ELT(kigo,0));
 	char KIGO[BUF1] ;
+	memset(KIGO, 0, sizeof KIGO); // 2015 12 18
 	strcpy(KIGO, kigoCode());
 	
 	// 2011 03 10 //  char * f[f_count];
@@ -79,7 +80,8 @@ extern "C" {
 	SEXP mydf, tmp, row_names, varlabels;
 	
 	
-	wchar_t  wbuf [BUF4] = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+	wchar_t  wbuf [BUF4] ;// = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
+	memset(wbuf, 0, sizeof wbuf); // 2015 12 18
 	list <string> strL;
 	list <string>::iterator iter;
 	

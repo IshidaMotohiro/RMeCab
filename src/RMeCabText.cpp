@@ -166,7 +166,7 @@ extern "C" {
 			  
 
 			  // もしもリストの空きがなくなっているなら，1000個新規スペースを足す
-			  if(length(my_list) <= i){
+			  if(xlength (my_list) <=  (R_xlen_t) i) { // 2015 12 18 // if(length(my_list) <= i){
 				UNPROTECT(1);  pa--;   // pa--; 0
 				PROTECT(my_list = lengthgets(my_list, i+1000)); pa++;// pa++ 1;
 			  }
@@ -185,7 +185,7 @@ extern "C" {
 	  //  UNPROTECT(2);
 		// リスト末尾に空きがあるなら取り除く
 	  UNPROTECT(1);  pa--;                  // pa-- 0;
-	  if(length(my_list) > i){
+	  if(xlength (my_list) >  (R_xlen_t) i) { // 2015 12 18 if(length(my_list) > i){
 		PROTECT(my_list = lengthgets(my_list, i)); pa++; // pa++ 1;
 	  }
 

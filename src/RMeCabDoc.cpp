@@ -223,7 +223,8 @@ extern "C" {
 				UNPROTECT(2);
 				
 				// もしもリストの空きがなくなっているなら，1000個新規スペースを足す
-				if(length(my_list) <= i){
+				
+				if(xlength(my_list) <= (R_xlen_t) i ) {  // 2015 12 28 if(length(my_list) <= i){
 				  UNPROTECT(1);
 				  PROTECT(my_list = lengthgets(my_list, i+1000));// pa++;  1
 				}
@@ -249,7 +250,7 @@ extern "C" {
 		}//_fgets_end
 	  }// _while_end
 	  UNPROTECT(1);                                            // pa--;0
-	  if(length(my_list) > i){
+	  if(xlength(my_list) > (R_xlen_t) i ) { //2015 12 18 if(length(my_list) > i){
 		PROTECT(my_list = lengthgets(my_list, i));             // pa++;1
 	  }
 	  UNPROTECT(1);

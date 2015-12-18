@@ -31,8 +31,9 @@ docMatrix2 <-
 
     if( is.null(dic) || is.na(dic)){
       dic = ""
-    } else if( (xl <- nchar(dic))  > 0 ) {
-     if (substring(dic, xl-3) != ".dic" || !(file.exists(dic)) )
+  } else if( (xl <- nchar(dic))  > 0 ) {
+      dic <- paste(dirname(dic), basename(dic), sep = "/")
+     if (  !(file.exists(dic)) )
        {
           cat ("specified dictionary file not found; result by default dictionary.\n")# 
          dic = ""

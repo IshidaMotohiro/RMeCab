@@ -12,8 +12,9 @@ function(str, mypref = 0, dic = "", mecabrc = "", etc = ""){
 
    if( is.null(dic) || is.na(dic)){
      dic = ""
-   } else if( (xl <- nchar(dic))  > 0 ) {
-     if (substring(dic, xl-3) != ".dic" || !(file.exists(dic)) )
+ } else if( (xl <- nchar(dic))  > 0 ) {
+     dic <- paste(dirname(dic), basename(dic), sep = "/")
+     if ( !(file.exists(dic)) )
        {
          cat ("specified dictionary file not found; result by default dictionary.\n")
          dic = ""
@@ -26,7 +27,8 @@ function(str, mypref = 0, dic = "", mecabrc = "", etc = ""){
    if(  is.null(mecabrc) || is.na(mecabrc) || (nchar(mecabrc)) < 2  ){
      mecabrc = ""
    } else {
-# 2015 12 11        mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
+                                        # 2015 12 11
+       mecabrc <- paste(dirname(mecabrc), basename(mecabrc), sep = "/")
      if ( !(file.exists(mecabrc)) )
        {
          cat ("specified mecabrc not found; result by default mecabrc.\n")

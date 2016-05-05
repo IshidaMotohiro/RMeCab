@@ -18,10 +18,9 @@
     Returns the weighted textmatrix of the same size and format as the input matrix.
 }
 \references{
-
-
-
+ \url{http://www.amazon.co.jp/dp/4627848412} 
 }
+
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }
 \examples{
 

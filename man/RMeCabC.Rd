@@ -37,7 +37,7 @@ second argument, it returns each morpheme in its basic form.
 %   ...
 }
 
-\references{石田基広『Rによるテキストマイニング入門』森北出版 2008}
+\references{  \url{http://www.amazon.co.jp/dp/4627848412} }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }%\author{ishida motohiro }
 % \note{ urther not 
 %  \section{Warning }{....} 

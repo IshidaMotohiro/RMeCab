@@ -29,7 +29,7 @@
 %    \item{comp2 }{Description of 'comp2'}
 %   ...
 }
-\references{put references to the literature/web site here  }
+\references{  \url{http://www.amazon.co.jp/dp/4627848412}    }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }%\author{ishida motohiro }
 % \note{ note
 %  \section{Warning }{....} 

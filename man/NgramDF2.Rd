@@ -1,3 +1,4 @@
+
 \name{NgramDF2}
 \alias{NgramDF2}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -40,7 +41,7 @@
 %   ...
 }
 % \references{put references to the literature/web site here  }
-\references{石田基広『Rによるテキストマイニング入門』森北出版 2008}
+\references{  \url{http://www.amazon.co.jp/dp/4627848412} }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }%\author{ishida motohiro }
 % \note{ note 
 %  \section{Warning }{....} 

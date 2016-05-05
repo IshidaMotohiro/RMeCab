@@ -301,7 +301,6 @@ extern "C" {
 	pma0 = ma0.begin();
 	while( pma0 != ma0.end()  ){
 	  if(pma0->second < mFreq){
-		//// http://www	.geocities.jp/ky_webid/cpp/library/009.html
 		ma0.erase(pma0++);/////ma0.erase(pma0);// 2007 09 15 // ma0.erase(pma0++);
 	  }else{
 		++pma0;

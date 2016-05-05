@@ -230,8 +230,6 @@ extern "C" {
 	pma0 = ma0.begin();
 	while( pma0 != ma0.end()  ){
 	  if(pma0->second < mFreq){
-		//// http://www.geocities.jp/ky_webid/cpp/library/009.html
-		// // なお、erase() は、削除された要素を指しているイテレータを無効な状態にしてしまうので注意が 必要です。vector、deque、string の場合には、erase() の戻り値を受け取るようにして、必ず有効なイテレータ を取得し直すように書きますが、set や multiset の場合は（また、第１０章で紹介 する map や multimap の場合は）erase() に戻り値がありません。そこで、次のように使います。
 		// // nums.erase( it++ );    // 要素を削除し、インクリメントを１つ先へ進める
 		ma0.erase(pma0++);///// ma0.erase(pma0);// 2007 09 15 // ma0.erase(pma0++);
 	  }else{

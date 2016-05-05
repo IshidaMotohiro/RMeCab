@@ -1,3 +1,4 @@
+
 \name{docMatrix}
 \alias{docMatrix}
 \alias{docVector}
@@ -45,7 +46,7 @@ document-term frequency list.
   \item{docMatrix}{the document-term matrix }
 }
 
-\references{石田基広『Rによるテキストマイニング入門』森北出版 2008}
+\references{  \url{http://www.amazon.co.jp/dp/4627848412}  }
 
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.comt} }
 % \seealso{ \code{\link[Rstem]{wordStem}}, \code{\link{stopwords_de}}, \code{\link{stopwords_en}}, \code{\link{setTriple}}, \code{\link{getTriple}}}

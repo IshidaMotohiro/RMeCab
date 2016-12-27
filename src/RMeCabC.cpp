@@ -183,7 +183,7 @@ extern "C" {
 		  SET_VECTOR_ELT(my_list, i, my_char);// リストに追加
 		  UNPROTECT(2);pa--;pa--;// pa = pa - 1; 1
 		  i++;
-		  if(i + 1000  > 199999){// リストが20万（四万）を越えるならエラーを起こしやすい
+		  if(i + 1000  > OVERLINE){// リストが20万（四万）を越えるならエラーを起こしやすい
 		    Rprintf("i == %d stop\n", i);
 		    mecab_destroy(mecab);
 		    //	my_list = my_char =  NULL;p = NULL;

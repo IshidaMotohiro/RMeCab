@@ -1,5 +1,5 @@
 /*
-  ver 0.9998 2014 12 03
+  ver 0.99995 2016 12 27
 
     全ての関数を使われる前に消し去りたい
 
@@ -310,7 +310,7 @@ extern "C" {
 	
 	n0 = (int)ma0.size();// ターム数のチェック
 			
-	if(n0 > 40000){
+	if(n0 > OVERLINE ){ // 40000 -> OVERLINE  // 2016 12 27
 	  Rprintf("Warning! number of extracted terms = %d\n", n0);
 	}else{
 	

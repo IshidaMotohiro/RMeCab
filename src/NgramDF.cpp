@@ -1,5 +1,5 @@
 /*
-  ver 0.9998 2014 12 03
+  ver 0.99995 2016 12 27
 
     全ての関数を使われる前に消し去りたい
 
@@ -416,8 +416,8 @@ extern "C" {
 		  ////////////////////
 
 	  
-	  if(n > 40000){
-		Rprintf("Ngram exceeds 40000\n");
+	  if(n > OVERLINE ){ // 40000 -> OVERLINE  // 2016 12 27
+		Rprintf("Ngram exceeds 99999 \n"); // 40000 -> 99999  // 2016 12 27
 		nn = 0;
 		
 		pa = m1.begin();

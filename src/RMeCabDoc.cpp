@@ -1,5 +1,5 @@
 /*
-  ver 0.9998 2014 12 03
+  ver 0.99995 2016 12 27
 
     全ての関数を使われる前に消し去りたい
 
@@ -233,7 +233,7 @@ extern "C" {
 				p = NULL;
 				
 				i++;
-				if(i > 40000){
+				if(i > OVERLINE ){// 40000 -> OVERLINE  // 2016 12 27
 				  Rprintf("node numbers i == %d stop\n", i);
 				  fclose(fp);
 				  UNPROTECT(1);

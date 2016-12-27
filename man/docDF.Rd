@@ -26,8 +26,7 @@
   \item{Genkei}{infinitive(0) or not(1)}
   \item{weight}{ tf or/and idf.see weight}
   \item{nDF}{0 or 1; if 1, ngrams are divided into columns}
-  \it
-  em{co}{to make co-occurence matrix.}
+  \item{co}{to make co-occurence matrix.}
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
   \item{mecabrc}{ to specify mecab resource file }
   \item{etc}{other options to mecab}  

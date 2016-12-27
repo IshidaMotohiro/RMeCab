@@ -1,5 +1,5 @@
 /*
-  ver 0.9998 2014 12 03
+  ver 0.99995 2016 12 27
 
     全ての関数を使われる前に消し去りたい
 
@@ -150,7 +150,7 @@ extern "C" {
 			  SET_VECTOR_ELT(my_list, i, my_char);
 			  UNPROTECT(1);    pa--;       //pa-- 1;
 			  i++;
-			  if(i + 1000  > 199999){// リストが10万(四万)を越えるならエラーを起こしやすい
+			  if(i + 1000  > OVERLINE){// リストが10万(四万)を越えるならエラーを起こしやすい
 				Rprintf("i == %d stop\n", i);
 				fclose(fp);mecab_destroy(mecab);
 				//	my_list = my_char =  NULL;p = NULL;

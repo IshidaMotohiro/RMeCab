@@ -1,5 +1,5 @@
 /*
-  ver 0.9998 2014 12 03
+  ver 0.99995 2016 12 27
 
     全ての関数を使われる前に消し去りたい
 
@@ -458,7 +458,7 @@ extern "C" {
 	
 	n0 = (int)ma0.size();// ターム数のチェック
 	
-	if(n0 > 40000){
+	if(n0 > OVERLINE ){ // 40000 -> 99999  // 2016 12 27
 	  Rprintf("Warning! number of extracted terms =  %d\n", n0);
 	}else{
 	  Rprintf("number of extracted terms = %d\n", n0);
@@ -574,7 +574,7 @@ extern "C" {
 
 /* START2008Y-3
    
-  ver 0.9998 2014 12 03
+  ver 0.99995 2016 12 27
   
   ティロ・フィナーレ
   

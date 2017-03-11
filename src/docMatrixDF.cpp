@@ -1,5 +1,5 @@
 /*
-  ver 0.99995 2016 12 27
+  ver 0.99996 2017 03 03
 
     全ての関数を使われる前に消し去りたい
 
@@ -305,7 +305,7 @@ extern "C" {
 	i = 0;
 	for(i = 0; i < file_num ; i++){
 	  //Rprintf("row names = %s\n", *pv);
-	  sprintf(buf3, "OBS.%d", i+1);
+	  sprintf(buf3, "ROW.%d", i+1);// OBS. -> ROW 2017 03 03 
 
 	  
  // // < 2005 11 08>

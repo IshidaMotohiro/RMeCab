@@ -68,9 +68,10 @@ extern int utf8locale;
 extern  int BUF1 ;
 extern  int BUF2 ;
 extern  int BUF3 ;
-extern int BUF4 ;
+extern  int BUF4 ;
 extern  int FILEINPUT  ;
-extern int OVERLINE  ;
+extern  int OVERLINE  ;
+
 
 /////////////////////////////////////////////////////////////
 extern char meisi[128];

@@ -1,8 +1,8 @@
 Package: RMeCab
 Type: Package
 Title: interface to MeCab
-Version: 0.99997
-Date: 2017-04-24 AM 10:00
+Version: 0.99998
+Date: 2017-07-05 PM 15:00
 Author: Motohiro Ishida
 Maintainer: <ishida.motohiro@gmail.com>
 Description: parsing Japanese texts with mecab-0.996 / R-3.4.0

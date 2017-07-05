@@ -15,4 +15,4 @@ src/docNgramDF.o
 src/RMeCabMx.o
 src/docMatrix2.o
 src/setMeCabMap.o
-
+src/symbols.rds

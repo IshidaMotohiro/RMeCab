@@ -64,7 +64,7 @@ extern "C" {
 	//	int mFt  = INTEGER_VALUE( ft );// ファイル 0 かディレクトリ 1 か最小頻度の数
 	
 
-	char file_name[512];
+	char file_name[FILEN];
 	char input[BUF4];
 	string str;
 	

@@ -71,7 +71,7 @@ extern  int BUF3 ;
 extern  int BUF4 ;
 extern  int FILEINPUT  ;
 extern  int OVERLINE  ;
-
+extern  int FILEN  ;
 
 /////////////////////////////////////////////////////////////
 extern char meisi[128];

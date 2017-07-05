@@ -62,7 +62,7 @@ extern "C" {
 	int NDF  = INTEGER_VALUE( nDF );// データフレームの列数
 		
 	int genkei  = INTEGER_VALUE( Genkei );// 活用は原型か 0 表層形か 1 
-	char file_name[512];
+	char file_name[FILEN];
 	char  input[BUF4];
 	char * p;
 	string str;

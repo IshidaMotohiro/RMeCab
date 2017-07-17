@@ -7,3 +7,4 @@ MECAB = -lmecab
 PKG_LIBS = $(MECAB)
 PKG_CPPFLAGS = -I.
 
+CXX_STD = CXX98

@@ -58,7 +58,7 @@ extern "C" {
 	  Rprintf("file = %s \n", file);
 		// とりあえず空の要素を1000個持つリストを生成する
 	  PROTECT(my_list = allocVector(VECSXP, 1000));  pa++; // pa++ 1;
-
+// Rprintf("allocVector\n");
 	  while(!feof(fp)){
 	    if(fgets(input2, FILEINPUT, fp) != NULL){// 2011 03 11 if(fgets(input2, 5120, fp) != NULL){
 		  node = ( mecab_node_t * ) mecab_sparse_tonode(mecab, input2);
@@ -67,7 +67,7 @@ extern "C" {
 		  
 				/// 解析結果のノードをなめる
 		  for (;  node; node = node->next) {
-			//		printf("%d ", node->id);
+            // printf("%d ", node->id);
 			
 			if (node->stat == MECAB_BOS_NODE)
 			  //printf("BOS");
@@ -76,7 +76,7 @@ extern "C" {
 			  //printf("EOS");
 			  continue;
 			else {
-			  // 2010 		buf1 = (char *)malloc( node->length * MB_CUR_MAX+ 1);
+			  // 2010  buf1 = (char *)malloc( node->length * MB_CUR_MAX+ 1);
 			  strncpy(buf1, node->surface, node->length) ;//元の語形
 
 			  buf1[node->length] = '\0';// 末尾にNULLを加える// 2006 06 移動
@@ -102,8 +102,8 @@ extern "C" {
 
 			  PROTECT(my_char=allocVector(STRSXP,10));pa++;
 			  // トークン解析結果用ベクトル生成  // pa++ 2;
-
-			  
+ // Rprintf("allocVector2\n");
+ //Rprintf("%s\n", my_char);			  
 
 //  // < 2005 11 08>
 // #if defined(WIN32)
@@ -154,34 +154,36 @@ extern "C" {
 				Rprintf("i == %d stop\n", i);
 				fclose(fp);mecab_destroy(mecab);
 				//	my_list = my_char =  NULL;p = NULL;
-				UNPROTECT(pa);return(my_list);
+				UNPROTECT(pa);
+                return(my_list);
 				/*
 				UNPROTECT(1);pa--;
 				PROTECT(my_list = lengthgets(my_list, 0));pa++;
 				UNPROTECT(1);pa--;
 				*/
-				return (R_NilValue); 
+				// return (R_NilValue); 
 			  }
 			  
 			  
 
 			  // もしもリストの空きがなくなっているなら，1000個新規スペースを足す
 			  if(xlength (my_list) <=  (R_xlen_t) i) { // 2015 12 18 // if(length(my_list) <= i){
+                             
 				UNPROTECT(1);  pa--;   // pa--; 0
 				PROTECT(my_list = lengthgets(my_list, i+1000)); pa++;// pa++ 1;
 			  }
 			  
 			  // i++;; 2010 08 23
 			}
-			//memset(buf1,'\0',strlen(buf1));
-			//memset(buf1,0,strlen(buf1));
-			//memset(buf2,0,strlen(buf2));		
+			// memset(buf1,'\0',strlen(buf1));
+			memset(buf1,0,strlen(buf1));
+			memset(buf2,0,strlen(buf2));		
 		  }// for
 		}//if
 	  }// while(!feof(fp));//while
-	  
+	   // Rprintf("close fike\n");        
 	  fclose(fp);
-	  mecab_destroy(mecab);
+      //	  mecab_destroy(mecab);
 	  //  UNPROTECT(2);
 		// リスト末尾に空きがあるなら取り除く
 	  UNPROTECT(1);  pa--;                  // pa-- 0;
@@ -189,7 +191,7 @@ extern "C" {
 		PROTECT(my_list = lengthgets(my_list, i)); pa++; // pa++ 1;
 	  }
 
-	  
+      mecab_destroy(mecab);
 	  UNPROTECT(pa); // UNPROTECT(1);                                  // pa-- 1;
 	  return(my_list);
 	  

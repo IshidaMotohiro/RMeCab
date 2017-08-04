@@ -244,8 +244,8 @@ extern "C" {
 			  }
 			}
 			
-			//memset(buf1,0,strlen(buf1));
-			//memset(buf2,0,strlen(buf2));
+			memset(buf1,0,strlen(buf1));// 2017 08 04 
+			memset(buf2,0,strlen(buf2));// 2017 08 04 
 		  }//_end_for_
 		}//_fgets_end
 	  }// _while_end

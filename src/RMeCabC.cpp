@@ -209,8 +209,8 @@ extern "C" {
 		  
 		}
 		//memset(buf1,'\0',strlen(buf1));
-		//memset(buf1,0,strlen(buf1));
-		//memset(buf2,0,strlen(buf2));
+		memset(buf1,0,strlen(buf1));
+		memset(buf2,0,strlen(buf2));
 	}
 
 	mecab_destroy(mecab);

@@ -35,7 +35,7 @@ RMeCabDF <-
 ## #    gc()
     kekka <- list(length(dataf[,coln]))
     for(i in 1:length(dataf[,coln])){
-      if( !is.factor(dataf[i,coln]) || is.na(dataf[i,coln])  ||  dataf[i, coln] == ""){
+      if( is.na(dataf[i,coln])  ||  dataf[i, coln] == ""){## if( !is.factor(dataf[i,coln]) || is.na(dataf[i,coln])  ||  dataf[i, coln] == ""){
       # stop("line number %d include non-characters!", i)
         kekka[[i]] <- NA
       }else{

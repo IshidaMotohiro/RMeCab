@@ -2,7 +2,7 @@
 ## comment out variables if you dont have these libs:
 
 
-MECAB = -lmecab
+MECAB = -L/usr/local/lib -lmecab
 
 PKG_LIBS = $(MECAB)
 PKG_CPPFLAGS = -I.

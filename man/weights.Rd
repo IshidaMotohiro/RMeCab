@@ -36,7 +36,7 @@
 \arguments{
    \item{m}{a document-term matrix.}
 }
-\details{
+%\details{
 %    When combining a local and a global weighting options to be applied on a 
 %    given textmatrix \code{m} via \eqn{dtm = lw(m) \cdot gw(m)}, where
    
@@ -65,16 +65,14 @@
 %    \code{globalIDF()} returns the inverse document frequency in a \eqn{n \times m} matrix. Every cell is 1 plus the logarithmus of the number of documents divided by the number of documents where the term appears.
    
 %    \code{globalIDF2()} returns the global frequency multiplied with idf. Every cell equals the sum of the frequencies of one term divided by the number of documents where the term shows up.
-   
-%    \code{globalEntropy()} returns the entropy.% (as defined by Shannon).
-   
+%    \code{globalEntropy()} returns the entropy.% (as defined by Shannon).   
 % %%   \code{gw\_entropy()} returns one plus entropy.
+%}
 
-}
 \value{
     Returns the weighted textmatrix of the same size and format as the input matrix.
 }
-\references{
+
 % Dumais, S. (1992) \emph{Enhancing Performance in Latent Semantic Indexing (LSI) Retrieval}. Technical Report, Bellcore.
 
 % Nakov, P., Popova, A., and Mateev, P. (2001) \emph{Weight functions impact on LSA performance}. In: Proceedings of the Recent Advances in Natural language processing, Bulgaria, pp.187-193.
@@ -82,19 +80,15 @@
 % Shannon, C. (1948) \emph{A Mathematical Theory of Communication}. In:
 % The Bell System Technical Journal 27(July), pp.379--423.
 
-
-}
+\references{  \url{http://www.amazon.co.jp/dp/4627848420}   }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }
-\examples{
-
-% ## use the logarithmised term frequency as local weight and 
-% ## the inverse document frequency as global weight.
-
-% vec1 = c( 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
-% vec2 = c( 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0 )
-% vec3 = c( 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0 )
-% m = cbind(vec1,vec2, vec3)
-% weighted = localTF(m) * globalIDF(m)
-
-}
+%% \examples{
+%% % ## use the logarithmised term frequency as local weight and 
+%% % ## the inverse document frequency as global weight.
+%% % vec1 = c( 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+%% % vec2 = c( 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0 )
+%% % vec3 = c( 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0 )
+%% % m = cbind(vec1,vec2, vec3)
+%% % weighted = localTF(m) * globalIDF(m)
+%% }
 \keyword{array}

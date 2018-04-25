@@ -1,9 +1,9 @@
 \name{collocate}
 \alias{collocate}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ collocate}
+\title{collocate}
 \description{
- \code{ collocate} makes MeCab find collocations from the specified Japanese textfile. The node of the collocations should be designated as the second argument, and the span of them shoud be designated as the third.
+ \code{collocate} makes MeCab find collocations from the specified Japanese textfile. The node of the collocations should be designated as the second argument, and the span of them shoud be designated as the third.
 
 }
 \usage{
@@ -17,29 +17,21 @@
   \item{node}{ node word }
   \item{span }{  windows span.  Default being 3}
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
-  \item{mecabrc}{ to specify mecab resource file }
+  \item{mecabrc}{ not implemented (to specify mecab resource file) }
   \item{etc}{other options to mecab} 
-%  \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
-% %  \item{mybuf}{ enough buffer for japanese strings}
+  %  \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
+  % %  \item{mybuf}{ enough buffer for japanese strings}
 }
 \details{
   If necessary, more details than the description above 
 }
 \value{
  generates and returns a new data frame.
-%   If it is a LIST, use
-%    \item{comp1 }{Description of 'comp1'}
-%    \item{comp2 }{Description of 'comp2'}
-%   ...
 }
 % \references{put references to the literature/web site here  }
-\references{  \url{http://www.amazon.co.jp/dp/4627848412}  }
-
+\references{  \url{http://www.amazon.co.jp/dp/4627848420}  }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }%\author{ishida motohiro }
-% \note{ not
-%  \section{Warning }{....} 
-% }
-\seealso{ objects to See Also as \code{\link{help}},  }
+% \seealso{ objects to See Also as \code{\link{help}},  }
 % \examples{
 % %   \dontrun{
 % %  z <- collocate(dat, 2)

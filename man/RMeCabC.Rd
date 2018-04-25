@@ -21,32 +21,25 @@ second argument, it returns each morpheme in its basic form.
 	on the text are returned.  If 1 is designated, the basic forms of
 	them are instead.  }
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
-  \item{mecabrc}{ to specify mecab resource file }
+  \item{mecabrc}{ not implemented (to specify mecab resource file) }
   \item{etc}{other options to mecab}
-%  \item{mybuf}{ enough buffer for japanese strings}
+  %  \item{mybuf}{ enough buffer for japanese strings}
 }
-\details{
-  If necessary, more details than the description above 
-}
+%% \details{
+%%   If necessary, more details than the description above 
+%% }
 \value{
   returns a list.
-%  Describe the value returned
-%   If it is a LIST, use
-%    \item{comp1 }{Description of 'comp1'}
-%    \item{comp2 }{Description of 'comp2'}
-%   ...
 }
 
-\references{  \url{http://www.amazon.co.jp/dp/4627848412} }
+\references{  \url{http://www.amazon.co.jp/dp/4627848420} }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }%\author{ishida motohiro }
 % \note{ urther not 
 %  \section{Warning }{....} 
 % }
-\seealso{ objects to See Also as \code{\link{help}},  }
+% \seealso{ objects to See Also as \code{\link{help}},  }
 % \examples{
 %   \dontrun{
-% % z <- RMeCabC("すもももももももものうち",1,512)
-%  z <- RMeCabC("すもももももももものうち",1) % the third arg omitted
 %   }
 % }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

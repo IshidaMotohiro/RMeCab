@@ -25,9 +25,9 @@ docVector( filename, pos,  posN, minFreq, kigo , dic = "", mecabrc = "", etc = "
 	1. Default being 0}
   \item{co}{retrieve co-ocurrence term matrix. default being = 0}
    \item{dic}{ to specify user dictionary, e.x. ishida.dic }
-  \item{mecabrc}{ to specify mecab resource file }
+  \item{mecabrc}{ not implemented (to specify mecab resource file)  }
   \item{etc}{other options to mecab} 
-%   \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
+  %   \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
 }
 \details{
   All textfiles in the specified directory are read in and a matrix is composed.
@@ -46,12 +46,11 @@ document-term frequency list.
   \item{docMatrix}{the document-term matrix }
 }
 
-\references{  \url{http://www.amazon.co.jp/dp/4627848412}  }
+\references{  \url{http://www.amazon.co.jp/dp/4627848420}  }
 
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.comt} }
 % \seealso{ \code{\link[Rstem]{wordStem}}, \code{\link{stopwords_de}}, \code{\link{stopwords_en}}, \code{\link{setTriple}}, \code{\link{getTriple}}}
 % \examples{
-
 % % # create some files
 % % td = tempfile()
 % % dir.create(td)
@@ -72,6 +71,5 @@ document-term frequency list.
 
 % % # clean up
 % % unlink(td, recursive=TRUE)
-
 % }
 \keyword{array}

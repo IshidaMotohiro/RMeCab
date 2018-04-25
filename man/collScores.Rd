@@ -14,24 +14,20 @@
   \item{kekka}{ result of collocate function.}
   \item{node}{ node word. }
   \item{span}{ span }
-% %  \item{mybuf}{ enough buffer for japanese strings}
+  % %  \item{mybuf}{ enough buffer for japanese strings}
 }
-\details{
-  If necessary, more details than the description above 
-}
+%% \details{
+%%   If necessary, more details than the description above 
+%% }
 \value{
- generates and returns ...
-%   If it is a LIST, use
-%    \item{comp1 }{Description of 'comp1'}
-%    \item{comp2 }{Description of 'comp2'}
-%   ...
+ generates and returns data.frame.
 }
-\references{  \url{http://www.amazon.co.jp/dp/4627848412}   }
+\references{  \url{http://www.amazon.co.jp/dp/4627848420}   }
 \author{ Motohiro ISHIDA \email{ishida.motohiro@gmail.com} }%\author{ishida motohiro }
 % \note{ not
 %  \section{Warning }{....} 
 % }
-\seealso{ objects to See Also as \code{\link{help}},  }
+% \seealso{ objects to See Also as \code{\link{help}},  }
 % \examples{
 % %   \dontrun{
 % %  z <- collScores(dat, 2)

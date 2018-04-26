@@ -1,7 +1,7 @@
 Package: RMeCab
 Type: Package
 Title: interface to MeCab
-Version: 0.01
+Version: 1.00
 Date: 2018-04-26 AM 10:00
 Author: Motohiro Ishida
 Maintainer: <ishida.motohiro@gmail.com>

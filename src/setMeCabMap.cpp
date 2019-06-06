@@ -9,10 +9,10 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
   mecab_node_t *node;
 	
  int i, j , posC = 0, xx =0; 	
- char buf1 [BUF1];// 2010 12 17 //[128];// [512];//入力された語形を記憶
- char buf2[BUF3];
- char buf3[BUF2];// 2010 12 17 //[64];// [512];記号チェック用
- char buf4[BUF2];// 2010 12 17 //[64];// [1024];記号チェック用
+ char buf1 [BUF1] = {0};// 2010 12 17 //[128];// [512];//入力された語形を記憶
+ char buf2 [BUF3] = {0};
+ char buf3 [BUF2] = {0};// 2010 12 17 //[64];// [512];記号チェック用
+ char buf4 [BUF2] = {0};// 2010 12 17 //[64];// [1024];記号チェック用
  string str;
  char *p;
 	
@@ -22,7 +22,7 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
   unsigned int  wz = 0;
 	
   string target;
-  char target2[BUF3];
+  char target2 [BUF3] = {0};
 			
 				
 

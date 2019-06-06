@@ -31,7 +31,7 @@ extern "C" {
 	int typeSet  = INTEGER_VALUE( type );// pos の数
 	int Ngram  = INTEGER_VALUE( N );// 最小頻度の数
 	int mFreq = 2;
-	char  input[BUF4];// [10240];// 2010 12 17 ;// [5120] = { 0 };//char  input[5120] = { 0 };
+	char  input[BUF4] = {0};// [10240];// 2010 12 17 ;// [5120] = { 0 };//char  input[5120] = { 0 };
 	memset (input, 0, sizeof input); // 2015 12 18
 	//	char  input2[5120] = { 0 };
 	
@@ -44,8 +44,8 @@ extern "C" {
 	int pc = 0;
 	
 	//////////////////////// < 2005 06 13 >
-	char buf3[BUF3];// 2010 12 17 ;// [64]; // [1024];品詞チェック用
-	char buf4[BUF3];// 2010 12 17 ;[64]; // [1024];品詞チェック用
+	char buf3[BUF3] = {0};// 2010 12 17 ;// [64]; // [1024];品詞チェック用
+	char buf4[BUF3] = {0};// 2010 12 17 ;[64]; // [1024];品詞チェック用
 	int pos_n  = INTEGER_VALUE( posN );// pos の数 // 2005 06 13
 	
 	bool flag = 1;
@@ -67,13 +67,13 @@ extern "C" {
 	list <string>::iterator iter;
 	
 	string target;
-	char target2[BUF3];
+	char target2[BUF3] = {0};
 				
 	mecab_t *mecab;
 	mecab_node_t *node;
 	
-	char buf1[BUF3];// 2010 12 17 ;[128];// [512];//入力された語形を記憶
-	char buf2[BUF3];
+	char buf1[BUF3] = {0};// 2010 12 17 ;[128];// [512];//入力された語形を記憶
+	char buf2[BUF3] = {0};
 	
 	int totalN = 0;// 2009 04 03
 

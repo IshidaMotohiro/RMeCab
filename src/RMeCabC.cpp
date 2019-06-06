@@ -34,8 +34,8 @@ extern "C" {
 	//	const char *result;
 	int pref = INTEGER_VALUE(mypref);// もとの形 0 か原型 1 か
 	int z = 0;int pa = 0;
-	char buf1[BUF1];//入力された語形を記憶
-	char buf2[BUF3];
+	char buf1[BUF1] = {0};//入力された語形を記憶
+	char buf2[BUF3] = {0};
  	char *p;
 	SEXP my_list, my_char,my_char2;
 	// int pa = 0; // PROTECT

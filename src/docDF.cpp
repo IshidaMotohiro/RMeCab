@@ -62,15 +62,15 @@ extern "C" {
 	int NDF  = INTEGER_VALUE( nDF );// データフレームの列数
 		
 	int genkei  = INTEGER_VALUE( Genkei );// 活用は原型か 0 表層形か 1 
-	char file_name[FILEN];
-	char  input[BUF4];
+	char file_name[FILEN] = {0};
+	char  input[BUF4] = {0};
 	char * p;
 	string str;
 	
-	char buf1[BUF1];// [512];//入力された語形を記憶
+	char buf1[BUF1] = {0};// [512];//入力された語形を記憶
 	//	char buf2[1024];
-	char buf3[BUF1];// [512];品詞チェック用
-	char buf4[BUF1];// [1024];品詞チェック用
+	char buf3[BUF1] = {0};// [512];品詞チェック用
+	char buf4[BUF1] = {0};// [1024];品詞チェック用
 
 	SEXP tmp, row_names, mydf = R_NilValue, varlabels = R_NilValue;// 2011 03 11 //  SEXP mydf, tmp, row_names, varlabels;// SEXP ans, dim, dimnames, row_names, col_names;
 	

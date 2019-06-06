@@ -31,7 +31,7 @@ extern "C" {
   const char* input = CHAR(STRING_ELT(filename,0));
   const char* dic = CHAR(STRING_ELT(mydic, 0));//指定辞書
   
-  char KIGO[BUF1]; // = CHAR(STRING_ELT(kigo,0));
+  char KIGO[BUF1] = {0}; // = CHAR(STRING_ELT(kigo,0));
   strcpy(KIGO, kigoCode());
   //strcpy(KIGO, "記号");
   //  Rprintf("before minFreq\n");
@@ -52,7 +52,7 @@ extern "C" {
   vector<string> Ppos2;  
 
   int totalM = 0;
-  char input2[BUF4];//char input2[5120];char input2[5120];
+  char input2[BUF4] = {0};//char input2[5120];char input2[5120];
   mecab_t *mecab;
   mecab_node_t *node;
 
@@ -60,10 +60,10 @@ extern "C" {
   int posC = 0;
   int pc = 0;
   //  int console = 0;
-  char buf1[BUF1];// [512];//入力された語形を記憶
-  char buf2[BUF3];
-  char buf3[BUF2];// [128];記号チェック用
-  char buf4[BUF2];// [128];  記号チェック用
+  char buf1[BUF1] = {0};// [512];//入力された語形を記憶
+  char buf2[BUF3] = {0};
+  char buf3[BUF2] = {0};// [128];記号チェック用
+  char buf4[BUF2] = {0};// [128];  記号チェック用
   char *p;
   //  SEXP mydf, tmp, varlables, row_names;
   SEXP vecInt, vecName, myPos;    

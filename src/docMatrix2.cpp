@@ -30,7 +30,7 @@ extern "C" {
 	char* path;
 	int f_count = INTEGER_VALUE( fileN );// 最小頻度の数
 	// const char* KIGO = CHAR(STRING_ELT(kigo,0));
-	char KIGO[BUF1]  = {0};
+	char KIGO[BUF1] ;
 	 strcpy(KIGO, kigoCode());
 	int mSym  = INTEGER_VALUE( kigo );// INTEGER_VALUE( sym );// 記号を含めるか 0 含めない;1 含める
 	const char* dic = CHAR(STRING_ELT(mydic, 0));//指定辞書
@@ -41,17 +41,17 @@ extern "C" {
 	}
 	//	int mFt  = INTEGER_VALUE( ft );// ファイル 0 かディレクトリ 1 か最小頻度の数
 
-	char file_name[FILEN] = {0};
-	char input[BUF4] = {0};
+	char file_name[FILEN];
+	char input[BUF4];
 	string str;
 	
 	mecab_t *mecab;
 	mecab_node_t *node;
 	
-	char buf1[BUF1] = {0};// [512];//入力された語形を記憶
-	char buf2[BUF3] = {0};
-	char buf3[BUF1] = {0};// 品詞チェック用
-	char buf4[BUF1] = {0};//[1024];
+	char buf1[BUF1];// [512];//入力された語形を記憶
+	char buf2[BUF3];
+	char buf3[BUF1];// 品詞チェック用
+	char buf4[BUF1];//[1024];
 	char *p;
 	SEXP ans, dim, dimnames, row_names, col_names;
 	

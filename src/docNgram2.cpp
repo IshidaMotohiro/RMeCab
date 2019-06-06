@@ -36,7 +36,7 @@ extern "C" {
 	// 2011 03 10 //  char * f[f_count];
 	vector <string> ff;
 	// const char* KIGO = CHAR(STRING_ELT(kigo,0));
-	char KIGO[BUF1]  = {0};
+	char KIGO[BUF1] ;
 	strcpy(KIGO, kigoCode());
 	
 	PROTECT(directory = AS_CHARACTER(directory));pc++;
@@ -64,17 +64,17 @@ extern "C" {
 	//	int mFt  = INTEGER_VALUE( ft );// ファイル 0 かディレクトリ 1 か最小頻度の数
 	
 
-	char file_name[FILEN] = {0};
-	char input[BUF4] = {0};
+	char file_name[FILEN];
+	char input[BUF4];
 	string str;
 	
 	mecab_t *mecab;
 	mecab_node_t *node;
 	
-	char buf1[BUF1] = {0};// [512];//入力された語形を記憶
-	char buf2[BUF3] = {0};
-	char buf3[BUF1] = {0}; // [512]; 品詞チェック用
- 	char buf4[BUF1] = {0}; // [1024]; 品詞チェック用
+	char buf1[BUF1];// [512];//入力された語形を記憶
+	char buf2[BUF3];
+	char buf3[BUF1]; // [512]; 品詞チェック用
+ 	char buf4[BUF1]; // [1024]; 品詞チェック用
 
 	char *p;
 	SEXP ans, dim, dimnames, row_names, col_names;
@@ -86,7 +86,7 @@ extern "C" {
 	list <string>::iterator iter;
 	
 	string target;
-	char target2[BUF3] = {0};
+	char target2[BUF3];
 
 	FILE *fp;// 2009 04 03
 	map<string, int> ma0;// , ma[f_count];     // ファイル数の数+登録単語用マップの数1 // 2009 04 03

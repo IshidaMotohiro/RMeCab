@@ -29,7 +29,7 @@ extern "C" {
 	int typeSet  = INTEGER_VALUE( type );// pos の数
 	int Ngram  = INTEGER_VALUE( N );// 最小頻度の数
 	int mFreq = 2;
-	char  input[BUF4] = {0};// = { 0 };//char  input[5120] = { 0 };
+	char  input[BUF4];// = { 0 };//char  input[5120] = { 0 };
 	memset (input, 0, sizeof input); // 2015 12 18
 	//	char  input2[5120] = { 0 };
 	
@@ -49,8 +49,8 @@ extern "C" {
 	unsigned int  wz = 0;
 	
 	//////////////////////// < 2005 06 13 >
-	char buf3[BUF2] = {0};// [1024]; 品詞チェック用
-	char buf4[BUF2] = {0};// [1024];品詞チェック用
+	char buf3[BUF2];// [1024]; 品詞チェック用
+	char buf4[BUF2];// [1024];品詞チェック用
 	int pos_n  = INTEGER_VALUE( posN );// pos の数 // 2005 06 13
 
 	bool flag = 1;

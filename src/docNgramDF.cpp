@@ -32,7 +32,7 @@ extern "C" {
 	
 	// const char* KIGO = CHAR(STRING_ELT(kigo,0));
 
-	char KIGO[BUF1] = {0};
+	char KIGO[BUF1];
 	strcpy(KIGO, kigoCode());
 	
 	PROTECT(rowN = AS_INTEGER(rowN));pc++;
@@ -60,10 +60,10 @@ extern "C" {
 	mecab_t *mecab;
 	mecab_node_t *node;
 	
-	char buf1[BUF1] = {0};//入力された語形を記憶
-	char buf2[BUF3] = {0};
-	char buf3[BUF1] = {0};// [512];品詞チェック
-	char buf4[BUF1] = {0};// [1024];
+	char buf1[BUF1];//入力された語形を記憶
+	char buf2[BUF3];
+	char buf3[BUF1];// [512];品詞チェック
+	char buf4[BUF1];// [1024];
 
 	char *p;
 	SEXP ans, dim, dimnames, row_names, col_names;
@@ -75,7 +75,7 @@ extern "C" {
 	list <string>::iterator iter;
 	
 	string target;
-	char target2[BUF3] = {0};
+	char target2[BUF3];
 
 	int pos_n  = INTEGER_VALUE( posN );// pos の数 // 2005 06 3
 	bool flag = 1;

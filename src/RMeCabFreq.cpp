@@ -31,14 +31,14 @@ extern "C" {
   
   
   //  const int * flag = INTEGER(dfY);
-  char input2[BUF4] = {0};//char input2[5120];
+  char input2[BUF4];//char input2[5120];
   mecab_t *mecab;
   mecab_node_t *node;
   int j = 0, n = 0, z = 0;
   int pc = 0;
   //  int console = 0;
-  char buf1[BUF1] = {0};// [512];//入力された語形を記憶
-  char buf2[BUF3] = {0};
+  char buf1[BUF1];// [512];//入力された語形を記憶
+  char buf2[BUF3];
   char *p;
   //SEXP mydf, my_list, my_char, tmp, varlabels,row_names;
   SEXP mydf, tmp, varlabels, row_names;

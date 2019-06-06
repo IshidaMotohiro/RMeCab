@@ -33,10 +33,10 @@ extern "C" {
 	mecab_t *mecab;
 	mecab_node_t *node;
 	int file = 0, n0 = 0, i = 0, j = 0, pc = 0, posC = 0, z = 0, *rans;
-	char buf1[BUF1] = {0};// [512];//入力された語形を記憶
-	char buf2[BUF3] = {0};
-	char buf3[BUF1] = {0}; // [512];品詞チェック用
-	char buf4[BUF1] = {0}; // [1024];品詞チェック用
+	char buf1[BUF1];// [512];//入力された語形を記憶
+	char buf2[BUF3];
+	char buf3[BUF1]; // [512];品詞チェック用
+	char buf4[BUF1]; // [1024];品詞チェック用
 	char *p;
 	SEXP ans, dim, dimnames, row_names, col_names;// 2009 04 03 
 	int mFreq  = INTEGER_VALUE( minFreq );// 最小頻度の数

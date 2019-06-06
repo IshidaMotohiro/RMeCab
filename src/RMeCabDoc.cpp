@@ -29,20 +29,20 @@ extern "C" {
 	const char* dic = CHAR(STRING_ELT(mydic, 0));//指定辞書
 	int sym = INTEGER_VALUE(kigo);// 記号を含むか含まない
 		// const char* KIGO = CHAR(STRING_ELT(kigo,0));
-	char KIGO[BUF1]  = {0};
+	char KIGO[BUF1] ;
 	strcpy(KIGO, kigoCode());
 	
 // 	if(sym == 1 ){// 記号を含むので，「記号」をセットする
 // 	  strcpy(KIGO, kigoCode());
 // 	}
 
-	char input2[BUF4] = {0};
+	char input2[BUF4];
 	mecab_t *mecab;
 	mecab_node_t *node;
 	int pref = INTEGER_VALUE(mypref);// もとの形 0 か原型 1 か
-	char buf1[BUF1] = {0};// [512];//入力された語形を記憶
-	char buf2[BUF3] = {0};
-	char buf3[BUF2] = {0};// [256]; 記号チェック用
+	char buf1[BUF1];// [512];//入力された語形を記憶
+	char buf2[BUF3];
+	char buf3[BUF2];// [256]; 記号チェック用
  	char *p;
 	SEXP my_list, my_char,my_char2;
 

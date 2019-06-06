@@ -27,14 +27,14 @@ extern "C" {
 
 	const char* file = CHAR(STRING_ELT(filename, 0));
 	const char* dic = CHAR(STRING_ELT(mydic, 0));//指定辞書
-	char input2[BUF4] = {0};
+	char input2[BUF4];
 	mecab_t *mecab;
 	mecab_node_t *node;
 	int i = 0;
 	int j = 0; int pa = 0;
 	//	int console = 0;
-	char buf1[BUF1] = {0};// [512];//入力された語形を記憶
-	char buf2[BUF3] = {0};
+	char buf1[BUF1];// [512];//入力された語形を記憶
+	char buf2[BUF3];
 	char *p;
 	SEXP my_list, my_char;
 

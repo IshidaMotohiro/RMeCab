@@ -142,7 +142,7 @@ extern "C"{
 					  //Rprintf("found  buf1\n");
 					  pa0->second += 1;
 					}else{
-					  m0.insert(make_pair(buf1, 1));// 1 は 1個目と言う意味
+					  m0.insert(pair<char*,int>(buf1, 1));// 1 は 1個目と言う意味
 					  //Rprintf("m0.insert  buf1\n");
 					}
 					

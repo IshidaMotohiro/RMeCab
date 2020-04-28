@@ -1,5 +1,5 @@
 /*
-  ver 0.99992 2015 12 17
+  ver 1.05 2020 04 28
 
     全ての関数を使われる前に消し去りたい
 
@@ -28,13 +28,13 @@
 //    return (SEXP) -1; }
 ///////////////////////////////////////////////////////////////
 
- int BUF1 = 128 * 4 ;  // 2016/12/27 2 -> 4
- int BUF2 = 64 * 4 ;   // 2016/12/27 2 -> 4
- int BUF3 = 1024 * 20 ; // 2016/12/27  2 -> 20
- int BUF4 = 5120 * 40 ; // 2016/12/27 2 -> 40
- int FILEINPUT = 5120 * 40 ; //2016/12/27 2  ->  40
- int OVERLINE  = 999999 ; //2017 08 03 99999 -> 999999
- int FILEN  = 99999 ; //2017 08 03 99999 -> 999999
+int BUF1 = 128 * 4 ;  // 2016/12/27 2 -> 4
+int BUF2 = 64 * 4 ;   // 2016/12/27 2 -> 4
+int BUF3 = 1024 * 20 ; // 2016/12/27  2 -> 20
+int BUF4 = 5120 * 40 ; // 2016/12/27 2 -> 40
+int FILEINPUT = 5120 * 40 ; //2016/12/27 2  ->  40
+int OVERLINE  = 999999 ; //2017 08 03 99999 -> 999999
+int FILEN  = 99999 ; //2017 08 03 99999 -> 999999
 
 /////////////////////////////////////////////////////////////
 char meisi[128];
@@ -55,9 +55,13 @@ char kigo[128];
 // extern "C" {
   
 char  * meisiCode(){
-  //    SEXP res;
-  const char  meisi_utf8[]  =  {0xe5, 0x90, 0x8d, 0xe8, 0xa9, 0x9e, 0}; //名詞
-  //  char        buf[128];
+    const char  meisi_utf8[]  =  {static_cast<char>(0xe5),
+				  static_cast<char>(0x90),
+				  static_cast<char>(0x8d),
+				  static_cast<char>(0xe8),
+				  static_cast<char>(0xa9),
+				  static_cast<char>(0x9e),
+				  0}; //名詞
   {
 	void *cd;
 	const char *i_buf    = meisi_utf8;
@@ -77,16 +81,16 @@ char  * meisiCode(){
 // 00000009
 char  * keiyouCode(){
   //    SEXP res;
-  const char  keiyou_utf8[]  =  {0xe5,
-								 0xbd,
-								 0xa2,
-								 0xe5,
-								 0xae,
-								 0xb9,
-								 0xe8,
-								 0xa9,
-								 0x9e,
-								 0}; //形容詞
+  const char  keiyou_utf8[]  =  {static_cast<char>(0xe5),
+				 static_cast<char>(0xbd),
+				 static_cast<char>(0xa2),
+				 static_cast<char>(0xe5),
+				 static_cast<char>(0xae),
+				 static_cast<char>(0xb9),
+				 static_cast<char>(0xe8),
+				 static_cast<char>(0xa9),
+				 static_cast<char>(0x9e),
+				 0}; //形容詞
   //  char        buf[128];
   {
 	void *cd;
@@ -102,8 +106,13 @@ char  * keiyouCode(){
 }
 ///////////////////////////////////////////////////////////////////
 char  * kigoCode(){
-  //    SEXP res;
-  const char  kigo_utf8[]  =  {0xe8, 0xa8, 0x98, 0xe5, 0x8f, 0xb7, 0}; //記号
+    const char  kigo_utf8[]  =  {static_cast<char>(0xe8),
+				 static_cast<char>(0xa8),
+				 static_cast<char>(0x98),
+				 static_cast<char>(0xe5),
+				 static_cast<char>(0x8f),
+				 static_cast<char>(0xb7),
+				 0}; //記号
   //  char        buf[128];
   {
 	void *cd;

@@ -1,5 +1,5 @@
 /*
-  ver 0.99995 2016 12 27
+  ver 1.04 2019 06 10
 
     全ての関数を使われる前に消し去りたい
 
@@ -56,8 +56,8 @@ extern "C" {
 	}else{
 	  
 	  Rprintf("file = %s \n", file);
-		// とりあえず空の要素を1000個持つリストを生成する
-	  PROTECT(my_list = allocVector(VECSXP, 1000));  pa++; // pa++ 1;
+		// とりあえず空の要素を5000個持つリストを生成する
+	  PROTECT(my_list = allocVector(VECSXP, 5000));  pa++; // pa++ 1; // 2019 06 10 1000 -> 5000
 // Rprintf("allocVector\n");
 	  while(!feof(fp)){
 	    if(fgets(input2, FILEINPUT, fp) != NULL){// 2011 03 11 if(fgets(input2, 5120, fp) != NULL){
@@ -150,7 +150,7 @@ extern "C" {
 			  SET_VECTOR_ELT(my_list, i, my_char);
 			  UNPROTECT(1);    pa--;       //pa-- 1;
 			  i++;
-			  if(i + 1000  > OVERLINE){// リストが10万(四万)を越えるならエラーを起こしやすい
+			  if(i + 5000  > OVERLINE){// リストが10万(四万)を越えるならエラーを起こしやすい// 2019 06 10 1000 -> 5000
 				Rprintf("i == %d stop\n", i);
 				fclose(fp);mecab_destroy(mecab);
 				//	my_list = my_char =  NULL;p = NULL;
@@ -166,11 +166,11 @@ extern "C" {
 			  
 			  
 
-			  // もしもリストの空きがなくなっているなら，1000個新規スペースを足す
+			  // もしもリストの空きがなくなっているなら，5000個新規スペースを足す
 			  if(xlength (my_list) <=  (R_xlen_t) i) { // 2015 12 18 // if(length(my_list) <= i){
                              
 				UNPROTECT(1);  pa--;   // pa--; 0
-				PROTECT(my_list = lengthgets(my_list, i+1000)); pa++;// pa++ 1;
+				PROTECT(my_list = lengthgets(my_list, i+5000)); pa++;// pa++ 1;// 2019 06 10 1000->5000
 			  }
 			  
 			  // i++;; 2010 08 23

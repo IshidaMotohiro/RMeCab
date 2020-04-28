@@ -1,5 +1,5 @@
 /*
-
+  ver 1.04 2019 06 10
 
     全ての関数を使われる前に消し去りたい
 
@@ -51,8 +51,8 @@ extern "C" {
 	CHECK(node);
 	// node の総数がチェックできれば，良いのだが
 	
-	// とりあえず空の要素を1000個持つリストを生成する
-	PROTECT(my_list = allocVector(VECSXP, 1000));pa++;// pa++; 1
+	// とりあえず空の要素を5000個持つリストを生成する
+	PROTECT(my_list = allocVector(VECSXP, 5000));pa++;// pa++; 1//2019 06 10 1000->5000
 
 
 	for (;  node; node = node->next) {
@@ -183,7 +183,7 @@ extern "C" {
 		  SET_VECTOR_ELT(my_list, i, my_char);// リストに追加
 		  UNPROTECT(2);pa--;pa--;// pa = pa - 1; 1
 		  i++;
-		  if(i + 1000  > OVERLINE){// リストが20万（四万）を越えるならエラーを起こしやすい
+		  if(i + 5000  > OVERLINE){// リストが20万（四万）を越えるならエラーを起こしやすい//2019 06 10 1000-> 5000
 		    Rprintf("i == %d stop\n", i);
 		    mecab_destroy(mecab);
 		    //	my_list = my_char =  NULL;p = NULL;
@@ -197,11 +197,11 @@ extern "C" {
 		  }
 			  
 
-		// もしもリストの空きがなくなっているなら，1000個新規スペースを足す
+		// もしもリストの空きがなくなっているなら，5000個新規スペースを足す
 		  
 		  if(xlength(my_list) <= (R_xlen_t) i ) { // 2015 12 28 if(length(my_list) <= i){
 			 UNPROTECT(1);pa--;
-			PROTECT(my_list = lengthgets(my_list, i+1000));pa++;// pa++;  1
+			PROTECT(my_list = lengthgets(my_list, i+5000));pa++;// pa++;  1//2019 06 10 1000->5000
 		  }
 		  p = NULL;
 		  

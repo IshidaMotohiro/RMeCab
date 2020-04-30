@@ -7,4 +7,4 @@ MECAB = -L/usr/local/lib -lmecab
 PKG_LIBS = $(MECAB)
 PKG_CPPFLAGS = -I.
 
-CXX_STD = CXX98
+## CXX_STD = CXX98

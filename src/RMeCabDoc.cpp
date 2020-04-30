@@ -64,8 +64,8 @@ extern "C" {
 	  // mecabによる解析準備	
 	  mecab = mecab_new2 (dic);// mecab = mecab_new2 ("MeCab");// mecab_new2 (" -u user.dic");
 	  CHECK(mecab);	
-	  // とりあえず空の要素を1000個持つリストを生成する
-	  PROTECT(my_list = allocVector(VECSXP, 2000));                //pa++; 1
+	  // とりあえず空の要素を5000個持つリストを生成する
+	  PROTECT(my_list = allocVector(VECSXP, 5000)); // 2019 06 10 2000 -> 5000               //pa++; 1
 	  //ファイル読み込み開始
 
 	  
@@ -222,11 +222,11 @@ extern "C" {
 				SET_VECTOR_ELT(my_list, i, my_char);// リストに追加
 				UNPROTECT(2);
 				
-				// もしもリストの空きがなくなっているなら，1000個新規スペースを足す
+				// もしもリストの空きがなくなっているなら，5000個新規スペースを足す
 				
 				if(xlength(my_list) <= (R_xlen_t) i ) {  // 2015 12 28 if(length(my_list) <= i){
 				  UNPROTECT(1);
-				  PROTECT(my_list = lengthgets(my_list, i+1000));// pa++;  1
+				  PROTECT(my_list = lengthgets(my_list, i+5000));// pa++;  1 //2019 06 10 1000 -> 5000
 				}
 				
 				

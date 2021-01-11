@@ -1,3 +1,5 @@
+/*   ver 1.00 2021 01 11 */
+
 #include "RMeCab.h"
 #include "setMeCabMap.h"
 
@@ -98,7 +100,7 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
 			  //						Rprintf("str %s\n", * iter);
 			  target.append( *iter);
 			  if(xx < Ngram){
-				 target.append(" ");//target.append("-");
+				 target.append("\a");//target.append("-");
 			  }
 			  xx++;
 			  //					  Rprintf("xx = %d\n", xx);
@@ -293,13 +295,13 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
 		  target.append( *iter);// target.append( buf3); //target.append( *iter);
 		  //					Rprintf("target append\n");
 		  if(xx < Ngram){
-			 target.append(" ");//target.append("-");
+			 target.append("\a");//target.append("-");
 		  }
 		  xx++;
 		} // for 
 		xx = 1;
 		if(typeSet == 1){
-		  target.append(" ");
+		  target.append("\a");
 		  for ( hinsi_it = hinsi.begin(); hinsi_it != hinsi.end(); hinsi_it++){
 		  // Rprintf("in for\n");
 			//sprintf(buf3, "%s", *iter);
@@ -308,14 +310,14 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
 			target.append( *hinsi_it);// target.append( buf3); //target.append( *iter);
 		  //					Rprintf("target append\n");
 			if(xx < Ngram){
-			   target.append(" ");//target.append("-");
+			   target.append("\a");//target.append("-");
 			}
 			xx++;
 		  } // for
 		
 		  xx = 1;
 		
-		  target.append(" ");
+		  target.append("\a");
 		  for ( saibun_it = saibun.begin(); saibun_it != saibun.end(); saibun_it++){
 			// Rprintf("in for\n");
 			//sprintf(buf3, "%s", *iter);
@@ -324,7 +326,7 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
 			target.append( *saibun_it);// target.append( buf3); //target.append( *iter);
 			//					Rprintf("target append\n");
 		  if(xx < Ngram){
-			 target.append(" ");//target.append("-");
+			 target.append("\a");//target.append("-");
 		  }
 		  xx++;
 		  } // for

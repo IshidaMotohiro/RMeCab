@@ -1,5 +1,5 @@
 /*
-  ver 0.99995 2016 12 27
+  ver 1.00 2021 01 11
 
     全ての関数を使われる前に消し去りたい
 
@@ -234,7 +234,7 @@ extern "C" {
 					  //x 				  Rprintf("str %s\n", *iter);
 					  target.append( *iter);
 					  if(xx < Ngram){
-						target.append(" ");	// target.append("-");// 2005 06 14 
+						target.append("\a");	// target.append("-");// 2005 06 14 
 					  }
 					  xx++;
 					  //					  Rprintf("xx = %d\n", xx);
@@ -370,7 +370,7 @@ extern "C" {
 // 				  Rprintf("after Rprintf in for\n");
 				  target.append( *iter);
 				  if(xx < Ngram){
-					target.append(" ");//	target.append("-");
+					target.append("\a");//	target.append("-");
 				  }
 				  xx++;
 				}
@@ -454,7 +454,7 @@ extern "C" {
 		pa = m2.begin();
 		for ( z = 0; z < nn; z++) {
 		  strcpy(buf4, (pa->first).c_str());
-		  p = strtok(buf4 , " " );//取得情報の分割
+		  p = strtok(buf4 , "\a" );//取得情報の分割
 		  j = 0;
 		  while(p != NULL){
 			sprintf(buf3, "%s", p);// 品詞情報の取得
@@ -510,7 +510,7 @@ extern "C" {
 			  SET_STRING_ELT(VECTOR_ELT(mydf, j++), z, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));	///<2006 04 18>
 			  
 			  
-			  p = strtok( NULL, " "); 
+			  p = strtok( NULL, "\a"); 
 			}
 		  }
 		  INTEGER(VECTOR_ELT(mydf,Ngram))[z] =   pa->second;// 最後に頻度情報
@@ -611,7 +611,7 @@ extern "C" {
 
 		for (z = 0; z < n; z++) {
 		  strcpy(buf4, (pa->first).c_str());
-		  p = strtok(buf4 , " " );//取得情報の分割
+		  p = strtok(buf4 , "\a" );//取得情報の分割
 		  j = 0;
 		  while(p != NULL){
 			sprintf(buf3, "%s", p);//
@@ -630,7 +630,7 @@ extern "C" {
 			
 
 			
-			p = strtok( NULL, " "); 
+			p = strtok( NULL, "\a"); 
 		  }
 		  INTEGER(VECTOR_ELT(mydf,Ngram))[z] =   pa->second;// 最後に頻度情報
 		  pa++;

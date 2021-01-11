@@ -5,5 +5,5 @@ Version: 1.06
 Date: 2021-01-11 AM 10:00
 Author: Motohiro Ishida
 Maintainer: <ishida.motohiro@gmail.com>
-Description: parsing Japanese texts with mecab-0.996 / R-4.0.2
+Description: parsing Japanese texts with mecab-0.996 / R-4.0.3
 License: GPL | LGPL | BSD

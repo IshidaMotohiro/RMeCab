@@ -38,3 +38,42 @@ MeCabのインストールから始めたいという方は、以下のサイト
 
 
 http://sites.google.com/site/rmecab/ でも説明しています。
+
+### Neologd 辞書
+
+以下のようにインストールします。
+
+```
+git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
+cd mecab-ipadic-neologd
+./bin/install-mecab-ipadic-neologd -n
+```
+
+インストール先の確認
+
+```
+mecab -d /usr/lib/mecab/dic/mecab-ipadic-neologd
+```
+
+動作確認
+
+```
+echo "8月3日に放送された「中居正広の金曜日のスマイルたちへ」(TBS系)で、1日たった5分でぽっこりおなかを解消するというダイエット方法を紹介。キンタ ロー。にも密着。" | mecab
+
+```
+
+### RMeCabでNeologdを使う準備
+
+
+/usr/local/etc/mecabrc を開いて以下のように変更するか、オリジナルのこのmecabrcファイルをホームフォルダに .mecabrc という隠しファイルとして保存し、これを以下のように変更してください。
+
+```
+;
+; Configuration file of MeCab
+;
+; $Id: mecabrc.in,v 1.3 2006/05/29 15:36:08 taku-ku Exp $;
+;
+; dicdir =  /usr/local/lib/mecab/dic/ipadic
+dicdir =  /usr/local/lib/mecab/dic/mecab-ipadic-neologd
+ 
+```

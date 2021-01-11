@@ -1,5 +1,5 @@
 /*
-  ver 0.99995 2016 12 27
+  ver 1.00 2021 01 11
 
     全ての関数を使われる前に消し去りたい
 
@@ -113,11 +113,11 @@ extern "C" {
 			while ( p != NULL ) {
 			  if(j == 1){//品詞情報1
 				str = p;
-				str.append(" ");
+				str.append("\a");
 			  }
 			  else if(j == 2){//品詞情報2
 				str.append(p);
-				str.append(" ");
+				str.append("\a");
 			  }
 			  else if( j == 7){
 				if(p == NULL || strcmp(p, "*") == 0){
@@ -205,7 +205,7 @@ extern "C" {
 	  char *token;
 	  strcpy(s, (pa->first).c_str());
 	  //	  Rprintf("%s\n", s);
-	  token = strtok(s, " ");// 最初の要素は品詞情報1
+	  token = strtok(s, "\a");// 最初の要素は品詞情報1
 
 // 	 // < 2005 11 08>
 // #if defined(WIN32)
@@ -220,7 +220,7 @@ extern "C" {
 
 	  SET_STRING_ELT(VECTOR_ELT(mydf, 1), z, mkCharCE(token, (utf8locale)?CE_UTF8:CE_NATIVE));///////<2006 04 18>
 	  
-	  token = strtok(NULL, " ");// 次の要素は品詞情報2
+	  token = strtok(NULL, "\a");// 次の要素は品詞情報2
 
   
  // // < 2005 11 08>
@@ -239,7 +239,7 @@ extern "C" {
 
 
 	  
-	  token = strtok( NULL, " ");// 次が形態素原型
+	  token = strtok( NULL, "\a");// 次が形態素原型
 
 //  // < 2005 11 08>
 // #if defined(WIN32)

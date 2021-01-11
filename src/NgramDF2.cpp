@@ -1,5 +1,5 @@
 /*
-  ver 0.99995 2016 12 27
+  ver 1.00 2021 01 11
 
     全ての関数を使われる前に消し去りたい
 
@@ -276,7 +276,7 @@ extern "C" {
 						//						Rprintf("str %s\n", * iter);
 						target.append( *iter);
 						if(xx < Ngram){
-						  target.append(" ");// target.append("-");
+						  target.append("\a");// target.append("-");
 						}
 						xx++;
 						//					  Rprintf("xx = %d\n", xx);
@@ -483,7 +483,7 @@ extern "C" {
 					target.append( *iter);// target.append( buf3); //target.append( *iter);
 					//Rprintf("target append %s\n", target.c_str());
 					if(xx < Ngram){
-					  target.append(" ");//  target.append("-");
+					  target.append("\a");//  target.append("-");
 					}
 					xx++;
 				  } // for 
@@ -577,7 +577,7 @@ extern "C" {
 	pma0 = ma0.begin();
 	for (xx = 0; xx < n0; xx++) {//n0 個のタームの数だけ繰り返す
 	  strcpy(buf4, (pma0->first).c_str());// 最初の要素の文字列を取得し
-	  p = strtok(buf4 , " " );//取得情報の分割
+	  p = strtok(buf4 , "\a" );//取得情報の分割
 	  //	  Rprintf("buf4 = %s - ", buf4); 
 	  j = 0;
 	  while(p != NULL){
@@ -599,7 +599,7 @@ extern "C" {
 		SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3 , (utf8locale)?CE_UTF8:CE_NATIVE));// < 2006 04 18>
 		
 		
-		p = strtok( NULL, " ");
+		p = strtok( NULL, "\a");
 		if( j >= Ngram){
 		  continue;
 		}

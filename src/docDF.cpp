@@ -1,5 +1,5 @@
 /*
-  ver 0.99995 2016 12 27
+  ver 1.00 2021 01 11
 
     全ての関数を使われる前に消し去りたい
 
@@ -344,7 +344,7 @@ extern "C" {
 		  buf3[0] = '\0';
 		  for (xx = 0; xx < n0; xx++) {//n0 行のタームの数だけ繰り返す
 			strcpy(buf4, (pma0->first).c_str());// 最初の要素の文字列を取得し
-			p = strtok(buf4 , " " );//タームの内容を Ngramずつ区切る
+			p = strtok(buf4 , "\a" );//タームの内容を Ngramずつ区切る
 			//	  Rprintf("buf4 = %s - ", buf4); 
 			j = 0;
 			i = 1;
@@ -366,7 +366,7 @@ extern "C" {
 			  
 			  //Rprintf("buf3 = %s  \n", buf3); 
 			  i++;
-			  p = strtok( NULL, " ");
+			  p = strtok( NULL, "\a");
 			  buf3[0] = '\0';
 			  continue;
 			  }
@@ -409,7 +409,7 @@ extern "C" {
 // // // 			  SET_VECTOR_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, CE_UTF8  ));
 // // // #endif
 			  
-			  p = strtok( NULL, " ");
+			  p = strtok( NULL, "\a");
 			  ++i;
 			  // if( j >= 2){
 // 				continue;

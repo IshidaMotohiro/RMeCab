@@ -65,7 +65,8 @@ echo "8月3日に放送された「中居正広の金曜日のスマイルたち
 ### how to use neologd with RMeCab
 
 
-edit /usr/local/etc/mecabrc or copy the file to your homefold as .mecabrc 
+open /usr/local/etc/mecabrc or copy the file to your home folder as .mecabrc 
+and edit as follows.
 
 ```
 ;

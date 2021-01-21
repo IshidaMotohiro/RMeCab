@@ -1,0 +1,35 @@
+##  Based on Makefile.win of Rblpapi
+##  https://github.com/Rblp/Rblpapi/blob/master/src/Makevars.win
+
+## Distinguish between 32 and 64 bit windows
+ifeq "$(WIN)" "64"
+    FLV = x64
+else
+    FLV = i386
+endif
+
+
+ifeq "$(RMECAB_URL)" ""
+    RMECAB_URL = https://github.com/IshidaMotohiro/R2MeCab/raw/master/inst/libs/libmecab
+endif
+
+
+
+
+PKG_CPPFLAGS += -I../inst/include -I.
+PKG_LIBS += -L../inst/libs/$(FLV) -lm -llibmecab
+
+
+.PHONY: all
+
+all: $(SHLIB)
+
+
+$(SHLIB): libmecab
+
+libmecab:
+	@if [ ! -d ../mecab/win/$(FLV) ]; then mkdir -p ../mecab/win/$(FLV) ; fi
+	@if [ ! -f ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz ]; then `"$(R_HOME)/bin$(R_ARCH_BIN)/Rscript.exe" -e "download.file(url='$(RMECAB_URL)$(WIN).tar.gz', destfile='../mecab/win/$(FLV)/libmecab$(WIN).tar.gz', quiet=TRUE)"`; tar xfz ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz ; fi
+	@if [ ! -d ../inst ]; then mkdir -p ../inst; fi
+	@if [ ! -d ../inst/libs/$(FLV) ]; then mkdir -p ../inst/libs/$(FLV); fi
+	@cp -rfp libmecab$(WIN)$(SHLIB_EXT) ../inst/libs/$(FLV)/libmecab$(SHLIB_EXT)

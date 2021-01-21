@@ -26,7 +26,7 @@ docVector( filename, pos,  posN, minFreq, kigo , dic = "", mecabrc = "", etc = "
   \item{co}{retrieve co-ocurrence term matrix. default being = 0}
    \item{dic}{ to specify user dictionary, e.x. ishida.dic }
   \item{mecabrc}{ not implemented (to specify mecab resource file)  }
-  \item{etc}{other options to mecab} 
+  \item{etc}{other options to mecab, not used now} 
   %   \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
 }
 \details{

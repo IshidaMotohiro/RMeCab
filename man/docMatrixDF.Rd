@@ -15,7 +15,7 @@ docMatrixDF( charVec = c("MeCab","CaBoCha"), pos= "Default", minFreq = 1, weight
   \item{co}{retrieve co-ocurrence term matrix. default being = 0}
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
   \item{mecabrc}{ not implemented (to specify mecab resource file) }
-  \item{etc}{other options to mecab}
+  \item{etc}{other options to mecab, not used now}
   %    \item{posN}{specifies length of  parts of speech which should be
   % 	 extracted. }
   %    \item{mydic}{ to specify user dictionary, e.x. ishida.dic }

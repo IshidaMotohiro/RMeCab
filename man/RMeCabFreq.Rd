@@ -15,7 +15,7 @@
   \item{filename}{ Japanese text}
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
   \item{mecabrc}{ not implemented (to specify mecab resource file)  }
-  \item{etc}{other options to mecab} 
+  \item{etc}{other options to mecab, not used now} 
 %  \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
 %%   \item{dfY}{returns data.frame}  
 }

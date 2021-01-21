@@ -1,10 +1,7 @@
 
 ## comment out variables if you dont have these libs:
 
-
-MECAB = -L/usr/local/lib -lmecab
-
-PKG_LIBS = $(MECAB)
-PKG_CPPFLAGS = -I.
+PKG_CXXFLAGS = $(mecab-config --cflags)
+PKG_LIBS += $(mecab-config --libs) -lmecab
 
 ## CXX_STD = CXX98

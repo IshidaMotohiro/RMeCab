@@ -21,7 +21,7 @@ docMatrix2(directory, pos= "Default",  minFreq = 1, weight = "no", kigo
   \item{co}{retrieve co-ocurrence term matrix. default being = 0}
   \item{dic}{ to specify user dictionary, e.x. ishida.dic }
   \item{mecabrc}{ not implemented (to specify mecab resource file)  }
-  \item{etc}{other options to mecab}
+  \item{etc}{other options to mecab, not used now}
   %  \item{sym}{ if total must include number of symbols, set sym = 1. Default being 0}
   %  \item{mydic}{ to specify user dictionary, e.x. ishida.dic }
 }

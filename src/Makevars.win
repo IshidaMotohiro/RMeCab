@@ -1,7 +1,6 @@
 ##  Based on Makefile.win of Rblpapi
 ##  https://github.com/Rblp/Rblpapi/blob/master/src/Makevars.win
 
-## Distinguish between 32 and 64 bit windows
 ifeq "$(WIN)" "64"
     FLV = x64
 else
@@ -10,7 +9,7 @@ endif
 
 
 ifeq "$(RMECAB_URL)" ""
-    RMECAB_URL = https://github.com/IshidaMotohiro/R2MeCab/raw/master/inst/libs/libmecab
+    RMECAB_URL = https://github.com/IshidaMotohiro/RMeCab/raw/master/inst/libs/libmecab
 endif
 
 

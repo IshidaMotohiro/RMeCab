@@ -8,7 +8,7 @@
 all textfiles in a given directory.
 }
 \usage{
-docMatrix( mydir, pos = "Default", minFreq = 1, weight ="no", kigo=0, co = 0)
+docMatrix( mydir, pos = "Default", minFreq = 1, weight ="no", kigo=0, co = 0, dic = "", mecabrc = "", etc = "")
 docVector( filename, pos,  posN, minFreq, kigo , dic = "", mecabrc = "", etc = "")
 }
 \arguments{

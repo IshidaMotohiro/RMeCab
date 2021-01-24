@@ -1,8 +1,8 @@
 #ifndef _RMECAB_H
 #define _RMECAB_H
 
-#include <mecab.h>
-
+// #include <mecab.h>
+#include "../inst/include/mecab.h"
 #include <R.h>
 #include <Rdefines.h>
 #include <Rinternals.h>
@@ -45,21 +45,7 @@ return result;
 }
 */
 
- /* ワイド文字列 <-> マルチバイト文字列
-void  multi (const wstring  * &src, string &target ){  
-        char *mbs = new char[src.length() * MB_CUR_MAX + 1];
-	wcstombs(mbs, src.c_str(), src.length() * MB_CUR_MAX + 1);
-	target = mbs;
-	delete [] mbs; 
-}
 
-void wide (const string &src, wstring &target) {
-	wchar_t *wcs = new wchar_t[src.length() + 1];
-	mbstowcs(wcs, src.c_str(), src.length() + 1);
-	target = wcs;
-	delete [] wcs;
-}
-*/
 
 extern int utf8locale;
 
@@ -79,15 +65,10 @@ extern char  * meisiCode();
 
 /////////////////////////////////////////////////////////////
 
-// ishida@ishida-ubuntu8:~$ echo -n '形容詞' | hexdump -C
-// 00000000  e5 bd a2 e5 ae b9 e8 a9  9e                       |.........|
-// 00000009
 extern char keiyou[128];
 extern char  * keiyouCode(); 
 ///////////////
 
-// ishida@ishida-ubuntu8:~/research/statistics/myRcode$  echo -n '記号' | hexdump -C
-// 00000000  e8 a8 98 e5 8f b7     
 /////////////////////////////////////////////////////////////
 extern char kigo[128];
 extern char  * kigoCode();

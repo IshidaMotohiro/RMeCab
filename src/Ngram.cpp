@@ -1,26 +1,8 @@
-/*
-  ver 0.99995 2016 12 27 
 
-    全ての関数を使われる前に消し去りたい
-
-
-　 　 　 　 |＼　　 　 　 　 　 ／|
-　 　 　 　 |＼＼　　 　 　 ／／|
-　　　　 　 : 　,>　｀´￣｀´　<　 ′
-.　　　　 　 Ｖ　 　 　 　 　 　 Ｖ
-.　　　　 　 i{　●　 　 　 ●　}i
-　　　　 　 八　 　 ､_,_, 　 　 八 　　　わけがわからないよ 
-. 　 　 　 /　个 . ＿　 ＿ . 个 ',
-　　　＿/ 　 il 　 ,'　　　 '.　 li　 ',＿_
-
-
-    docDF関数で全てをまかなえるから
-  
-*/
 #include "RMeCab.h"
 
 //////////////////////////////////////////////////////
-/* N-gram を計算 */
+
 extern "C" {
   SEXP Ngram(SEXP filename, SEXP type, SEXP N, SEXP pos, SEXP posN  , SEXP mydic ){
 	const char* file = CHAR(STRING_ELT(filename,0));
@@ -35,7 +17,6 @@ extern "C" {
 	
 	wchar_t  wbuf [BUF4] ;// = { 0 }; //wchar_t  wbuf [5120] = { 0 }; /* ワイド文字列 : 日本語文字数  + 1 */
 	memset (wbuf, 0, sizeof wbuf);// 2015 12 18
-	/* マルチバイトUTF-8 で漢字は3バイト，一文字取るなら 3 + 1 */
 // 	//	char str[Ngram][4]  = { 0 };
 // // 	char str1[4] = { 0 };
 // // 	char str2[4] = { 0 };

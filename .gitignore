@@ -16,3 +16,5 @@ src/RMeCabMx.o
 src/docMatrix2.o
 src/setMeCabMap.o
 src/symbols.rds
+inst/libs/i386/libmecab.dll
+inst/libs/x64/libmecab.dll

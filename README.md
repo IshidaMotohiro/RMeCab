@@ -2,46 +2,40 @@
 
 ## Interface to MeCab
 
-日本語形態素解析器MeCabインターフェイスのR言語用パッケージです。解析エンジン部分はC言語/C＋＋で作成されています。
+This is a package of Japanese morphological analyzer MeCab interface for R language. The analysis engine part is written in C/C++.
 
 
-## インストール
+## install mecab
 
-
-R と MeCab の両方が既にインストールされているのならば R を起動し、コンソールで以下を実行すればインストールは完了です。
-
-```
- # Windowsの場合
- install.packages("RMeCab", repos = "https://rmecab.jp/R") 
- # Mac あるいは Linux の場合 
- install.packages("RMeCab", repos = "https://rmecab.jp/R", type = "source") 
- ```
- 
-実行できるか、以下を試してみましょう。
+For Mac or Linux
 
 ```
-library(RMeCab)
-res <- RMeCabC("すもももももももものうち")
-unlist (res)
+$ cd ~/Downloads
+$ curl -fsSL ‘https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7cENtOXlicTFaRUE’ -o mecab-0.996.tar.gz
+$ tar xf mecab-0.996.tar.gz
+$ cd mecab-0.996
+$ ./configure –with-charset=utf8
+$ make
+$ sudo make install
+$ sudo ldconfig
+$ cd ~/Downloads
+$ curl -fsSL ‘https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7MWVlSDBCSXZMTXM’ -o mecab-ipadic-2.7.0-20070801.tar.gz
+$ tar zvxf mecab-ipadic-2.7.0-20070801.tar.gz
+$ tar xf mecab-ipadic-2.7.0-20070801.tar.gz
+$ cd mecab-ipadic-2.7.0-20070801
+$ ./configure –with-charset=utf-8
+$ make
+$ sudo make install
+$ sudo ldconfig
 ```
 
-次のように表示されれば、インストールに成功しています。
 
-```
-> unlist (res)
-    名詞     助詞     名詞     助詞     名詞     助詞     名詞 
- "すもも"     "も"   "もも"     "も"   "もも"     "の"   "うち" 
- ```
- 
- 
-MeCabのインストールから始めたいという方は、以下のサイトで、自身のOSに対応したセクションの解説を参照してください。
+https://rmecab.jp/new/ 
 
 
-http://sites.google.com/site/rmecab/ でも説明しています。
+### install neologd(option)
 
-### Neologd 辞書
 
-以下のようにインストールします。
 
 ```
 git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
@@ -49,18 +43,10 @@ cd mecab-ipadic-neologd
 ./bin/install-mecab-ipadic-neologd -n
 ```
 
-インストール先の確認
-
 ```
 mecab -d /usr/lib/mecab/dic/mecab-ipadic-neologd
 ```
 
-動作確認
-
-```
-echo "8月3日に放送された「中居正広の金曜日のスマイルたちへ」(TBS系)で、1日たった5分でぽっこりおなかを解消するというダイエット方法を紹介。キンタ ロー。にも密着。" | mecab
-
-```
 
 ### how to use neologd with RMeCab
 

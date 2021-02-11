@@ -28,7 +28,7 @@ $(SHLIB): libmecab
 
 libmecab:
 	@if [ ! -d ../mecab/win/$(FLV) ]; then mkdir -p ../mecab/win/$(FLV) ; fi
-	@if [ ! -f ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz ]; then `"$(R_HOME)/bin$(R_ARCH_BIN)/Rscript.exe" -e "download.file(url='$(RMECAB_URL)$(WIN).tar.gz', destfile='../mecab/win/$(FLV)/libmecab$(WIN).tar.gz', quiet=TRUE)"`; fi
+	@if [ ! -f ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz ]; then `"$(R_HOME)/bin$(R_ARCH_BIN)/Rscript.exe" -e "download.file(url='$(RMECAB_URL)', destfile='../mecab/win/$(FLV)/libmecab$(WIN).tar.gz', quiet=TRUE)"`; fi
 	@tar xfz ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz 
 	@if [ ! -d ../inst ]; then mkdir -p ../inst; fi
 	@if [ ! -d ../inst/libs/$(FLV) ]; then mkdir -p ../inst/libs/$(FLV); fi

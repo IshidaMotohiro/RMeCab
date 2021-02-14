@@ -24,11 +24,13 @@
 
 
 
-//#define CHECK(eval) if (! eval) {				\
+/* #define CHECK(eval) if (! eval) {				\
 //    fprintf (stderr, "Exception:%s\n", mecab_strerror (mecab));	\
 //    mecab_destroy(mecab);						\
 //    return (SEXP) -1; }
-///////////////////////////////////////////////////////////////
+*/
+
+//////////////////////////////////////////////////////////////
 
 int BUF1 = 128 * 4 ;  // 2016/12/27 2 -> 4
 int BUF2 = 64 * 4 ;   // 2016/12/27 2 -> 4

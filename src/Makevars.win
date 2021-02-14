@@ -1,34 +1,23 @@
-##  Based on Makefile.win of Rblpapi
-##  https://github.com/Rblp/Rblpapi/blob/master/src/Makevars.win
+
+###################################################
+# PKG_CXXFLAGS = -O3  
+# CXX_STD = c++03
+# CXX98STD = -std=c++98
+# CXXFLAGS += "-fpermissive -std=c++98"
+
+MECAB = -lmecab
+MECAB64 = -lmecab64
+
+
 
 ifeq "$(WIN)" "64"
-    FLV = x64
+     PKG_LIBS = -L../src-x64 $(MECAB64)# value for 64-bit Windows
 else
-    FLV = i386
-endif
+     PKG_LIBS = -L../src-i386 $(MECAB)# value for 32-bit Windows
+     endif
 
-
-ifeq "$(RMECAB_URL)" ""
-    RMECAB_URL = https://github.com/IshidaMotohiro/RMeCab/raw/master/inst/libs/libmecab
-endif
+PKG_CPPFLAGS = -I.
 
 
 
 
-PKG_CPPFLAGS += -I../inst/include -I.
-PKG_LIBS += -L../inst/libs/$(FLV) -lm -llibmecab
-
-
-.PHONY: all
-
-all: $(SHLIB)
-
-
-$(SHLIB): libmecab
-
-libmecab:
-	@if [ ! -d ../mecab/win/$(FLV) ]; then mkdir -p ../mecab/win/$(FLV) ; fi
-	@if [ ! -f ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz ]; then `"$(R_HOME)/bin$(R_ARCH_BIN)/Rscript.exe" -e "download.file(url='$(RMECAB_URL)$(WIN).tar.gz', destfile='../mecab/win/$(FLV)/libmecab$(WIN).tar.gz', quiet=TRUE)"`; tar xfz ../mecab/win/$(FLV)/libmecab$(WIN).tar.gz ; fi
-	@if [ ! -d ../inst ]; then mkdir -p ../inst; fi
-	@if [ ! -d ../inst/libs/$(FLV) ]; then mkdir -p ../inst/libs/$(FLV); fi
-	@cp -rfp libmecab$(WIN)$(SHLIB_EXT) ../inst/libs/$(FLV)/libmecab$(SHLIB_EXT)

@@ -217,6 +217,7 @@ extern "C" {
 // #endif
 		// 2008 04 05 #if defined(_WIN64) || !defined(_WIN32)
 		// defined(__MINGW32__) || defined(__MINGW64__
+				  /* 2022 04 30
 #if defined(WIN32) || defined(WIN64) || defined(_WIN32) || defined(_WIN64)
 		wsprintf(target2, "%lc", wbuf[wz]);// windows では wsprintf
 #elif  defined(__MINGW32__) || defined(__WINGW64__)
@@ -224,7 +225,8 @@ extern "C" {
 #else
 		sprintf(target2, "%lc", wbuf[wz]);// Linux  では sprintf
 #endif
-			   
+				  */
+				  sprintf(target2, "%lc", wbuf[wz]);// Linux  では sprintf
 				
 				  if(strlen(target2) < 1){
 					break;;

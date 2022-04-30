@@ -174,13 +174,16 @@ extern "C" {
 
 		// 2008 04 05 #if defined(_WIN64) || !defined(_WIN32)
 		// defined(__MINGW32__) || defined(__MINGW64__
-#if defined(WIN32) || defined(WIN64) || defined(_WIN32) || defined(_WIN64)
-		wsprintf(target2, "%lc", wbuf[wz]);// windows では wsprintf
+			    /* 2022 04 30
+#if defined(WIN32) || defined(WIN64) || defined(_WIN32) || defined(_WIN64) // 2022 04 30
+ 		wsprintf(target2, "%lc", wbuf[wz]);// windows では wsprintf
 #elif  defined(__MINGW32__) || defined(__WINGW64__)
-		wsprintf(target2, "%lc", wbuf[wz]);//  windows では wsprintf
+ 		wsprintf(target2, "%lc", wbuf[wz]);//  windows では wsprintf
 #else
-		sprintf(target2, "%lc", wbuf[wz]);// Linux  では sprintf
-#endif
+ 		sprintf(target2, "%lc", wbuf[wz]);// Linux  では sprintf
+#endif // 2022 04 30
+			    */
+			    sprintf(target2, "%lc", wbuf[wz]);// Linux  では sprintf
 	
 				
 				//				Rprintf("target2 = %s\n", target2);

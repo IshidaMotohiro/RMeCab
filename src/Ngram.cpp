@@ -465,7 +465,7 @@ extern "C" {
 // 	// SET_VECTOR_ELT(VECTOR_ELT(mydf, 0), z, mkChar( (pa->first).c_str() ));
 // // </ 2005 11 08>
 
-		  SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( (pa->first).c_str(), (utf8locale)?CE_UTF8:CE_NATIVE ));			  ///<2006 04 18>
+		  SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( (pa->first).c_str(), CE_UTF8)); // (utf8locale)?CE_UTF8:CE_NATIVE ));			  ///<2006 04 18>
 		  
 		  INTEGER(VECTOR_ELT(mydf,1))[z] =   pa->second;// 最後に頻度情報
 		  pa++;
@@ -498,8 +498,8 @@ extern "C" {
 // 		// </ 2005 11 08>
 		
 
-		SET_STRING_ELT(varlabels, 0, mkCharCE("Ngram", (utf8locale)?CE_UTF8:CE_NATIVE));
-		SET_STRING_ELT(varlabels, 1, mkCharCE("Freq", (utf8locale)?CE_UTF8:CE_NATIVE));		
+		SET_STRING_ELT(varlabels, 0, mkCharCE("Ngram", CE_UTF8)); // (utf8locale)?CE_UTF8:CE_NATIVE));
+		SET_STRING_ELT(varlabels, 1, mkCharCE("Freq", CE_UTF8)); // (utf8locale)?CE_UTF8:CE_NATIVE));		
 
 	///////////////////////// new_end 
 	  // データフレームオブジェクト mydf の属性設定 
@@ -525,7 +525,7 @@ extern "C" {
 // 		//SET_STRING_ELT(row_names, z, mkChar(labelbuff));
 // 		    // </ 2005 11 08>
 
-		  SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));
+		  SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 		  
 		
 		}
@@ -562,7 +562,7 @@ extern "C" {
 // 		    // </ 2005 11 08>
 
 
-		  SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( (pa->first).c_str() , (utf8locale)?CE_UTF8:CE_NATIVE));///<2006 04 18>
+		  SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( (pa->first).c_str() , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));///<2006 04 18>
 		  
 		  
 		INTEGER(VECTOR_ELT(mydf,1))[z] =   pa->second;// 最後に頻度情報
@@ -596,8 +596,8 @@ extern "C" {
 // 	  // </ 2005 11 08>
 
 
-		SET_STRING_ELT(varlabels, 0, mkCharCE("Ngram", (utf8locale)?CE_UTF8:CE_NATIVE));
-		SET_STRING_ELT(varlabels, 1, mkCharCE("Freq", (utf8locale)?CE_UTF8:CE_NATIVE));
+		SET_STRING_ELT(varlabels, 0, mkCharCE("Ngram", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+		SET_STRING_ELT(varlabels, 1, mkCharCE("Freq", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 
 		
 	///////////////////////// new_end 
@@ -624,7 +624,7 @@ extern "C" {
 // 		  // SET_STRING_ELT(row_names, z, mkChar(labelbuff));
 // 		  // </ 2005 11 08>
 		  
-		SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));
+		  SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 
 		
 		}

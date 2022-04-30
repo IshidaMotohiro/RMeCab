@@ -452,7 +452,7 @@ extern "C" {
 // 			  // SET_VECTOR_ELT(VECTOR_ELT(mydf, 0), z, mkChar( buf3 ));
 //   // </ 2005 11 08>
 
-			  SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( buf3 , (utf8locale)?CE_UTF8:CE_NATIVE));	///<2006 04 18>		 
+			  SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( buf3 , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	///<2006 04 18>		 
 
 			  
 			  for( i = 1; i < Ngram; i++){
@@ -469,7 +469,7 @@ extern "C" {
 // 				//SET_VECTOR_ELT(VECTOR_ELT(mydf, 0), z, mkChar( " " ));
 //   // </ 2005 11 08>
 
-		SET_VECTOR_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( " " ,  (utf8locale)?CE_UTF8:CE_NATIVE));///<2006 04 18>		 
+			    SET_VECTOR_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( " " ,  CE_UTF8));//(utf8locale)?CE_UTF8:CE_NATIVE));///<2006 04 18>		 
 
 
 		
@@ -489,7 +489,7 @@ extern "C" {
 // 			  // SET_VECTOR_ELT(VECTOR_ELT(mydf, j++), z, mkChar( buf3 ));
 //   // </ 2005 11 08>
 
-			  SET_STRING_ELT(VECTOR_ELT(mydf, j++), z, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));	///<2006 04 18>
+			  SET_STRING_ELT(VECTOR_ELT(mydf, j++), z, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));	///<2006 04 18>
 			  
 			  
 			  p = strtok( NULL, "\a"); 
@@ -524,7 +524,7 @@ extern "C" {
 // 		  // SET_STRING_ELT(varlabels, z, mkChar( buf3 ));
 //   // </ 2005 11 08>
 
-		  SET_STRING_ELT(varlabels, z, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));
+		  SET_STRING_ELT(varlabels, z, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 		  
 		}
 
@@ -540,7 +540,7 @@ extern "C" {
 // 		// SET_STRING_ELT(varlabels, Ngram, mkChar("Freq"));
 //   // </ 2005 11 08>
 
-		SET_STRING_ELT(varlabels, Ngram, mkCharCE("Freq", (utf8locale)?CE_UTF8:CE_NATIVE));	
+		SET_STRING_ELT(varlabels, Ngram, mkCharCE("Freq", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	
 		
 
 	///////////////////////// new_end 
@@ -566,7 +566,7 @@ extern "C" {
 // 		  //SET_STRING_ELT(row_names, z, mkChar(labelbuff));
 //   // </ 2005 11 08>
 
-		   SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));	
+		   SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	
 		  
 		}
 		setAttrib(mydf, R_RowNamesSymbol, row_names);
@@ -608,7 +608,7 @@ extern "C" {
 			//SET_VECTOR_ELT(VECTOR_ELT(mydf, j++), z, mkChar( buf3 ));
   // </ 2005 11 08>
 			
-			SET_STRING_ELT(VECTOR_ELT(mydf, j++), z, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));			 //<2006 04 18>
+			SET_STRING_ELT(VECTOR_ELT(mydf, j++), z, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));			 //<2006 04 18>
 			
 
 			
@@ -640,7 +640,7 @@ extern "C" {
 // 			// SET_STRING_ELT(varlabels, z, mkChar( buf3 ));
 //   // </ 2005 11 08>
 
-		  SET_STRING_ELT(varlabels, z, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));	
+		  SET_STRING_ELT(varlabels, z, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));	
 			
 		}
 
@@ -656,7 +656,7 @@ extern "C" {
 // 		// SET_STRING_ELT(varlabels, Ngram, mkChar("Freq"));
 //   // </ 2005 11 08>	
 		
-		SET_STRING_ELT(varlabels, Ngram, mkCharCE("Freq", (utf8locale)?CE_UTF8:CE_NATIVE));	
+		SET_STRING_ELT(varlabels, Ngram, mkCharCE("Freq", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	
 		
 	  
 	///////////////////////// new_end 
@@ -683,7 +683,7 @@ extern "C" {
 // 		  // SET_STRING_ELT(row_names, z, mkChar(labelbuff));
 //   // </ 2005 11 08>
 		  
-		  SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));	
+		  SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	
 
 		  
 		}

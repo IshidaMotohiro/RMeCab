@@ -173,10 +173,10 @@ extern "C" {
 // #endif	
 // // </ 2005 11 08>
 
-	SET_STRING_ELT(varlabels, 0, mkCharCE("Term", (utf8locale)?CE_UTF8:CE_NATIVE));
-	SET_STRING_ELT(varlabels, 1, mkCharCE("Info1", (utf8locale)?CE_UTF8:CE_NATIVE));
-	SET_STRING_ELT(varlabels, 2, mkCharCE("Info2", (utf8locale)?CE_UTF8:CE_NATIVE));
-	SET_STRING_ELT(varlabels, 3, mkCharCE("Freq", (utf8locale)?CE_UTF8:CE_NATIVE));
+	SET_STRING_ELT(varlabels, 0, mkCharCE("Term", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+	SET_STRING_ELT(varlabels, 1, mkCharCE("Info1", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+	SET_STRING_ELT(varlabels, 2, mkCharCE("Info2", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+	SET_STRING_ELT(varlabels, 3, mkCharCE("Freq", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 
 	
 	Rprintf("length = %d \n", m1.size());
@@ -200,7 +200,7 @@ extern "C" {
 // 	  //	  SET_VECTOR_ELT(VECTOR_ELT(mydf, 1), z, mkChar(token));
 // // </ 2005 11 08>
 
-	  SET_STRING_ELT(VECTOR_ELT(mydf, 1), z, mkCharCE(token, (utf8locale)?CE_UTF8:CE_NATIVE));///////<2006 04 18>
+	  SET_STRING_ELT(VECTOR_ELT(mydf, 1), z, mkCharCE(token, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));///////<2006 04 18>
 	  
 	  token = strtok(NULL, "\a");// 次の要素は品詞情報2
 
@@ -216,7 +216,7 @@ extern "C" {
 // 		// SET_VECTOR_ELT(VECTOR_ELT(mydf, 2), z, mkChar(token));
 // // </ 2005 11 08>
 	  
-	  SET_STRING_ELT(VECTOR_ELT(mydf, 2), z, mkCharCE(token, (utf8locale)?CE_UTF8:CE_NATIVE));	 ///////<2006 04 18>
+	  SET_STRING_ELT(VECTOR_ELT(mydf, 2), z, mkCharCE(token, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	 ///////<2006 04 18>
 	  
 
 
@@ -234,7 +234,7 @@ extern "C" {
 // 		 //	  SET_VECTOR_ELT(VECTOR_ELT(mydf,0), z, mkChar(token));
 //  // </ 2005 11 08>
 
-	  SET_STRING_ELT(VECTOR_ELT(mydf,0), z, mkCharCE(token, (utf8locale)?CE_UTF8:CE_NATIVE)); ///////<2006 04 18>
+	  SET_STRING_ELT(VECTOR_ELT(mydf,0), z, mkCharCE(token, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE)); ///////<2006 04 18>
 
 	  
 
@@ -268,7 +268,7 @@ extern "C" {
   // </ 2005 11 08>
 
 
-	   SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));
+	   SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 	   
 	  
 	}

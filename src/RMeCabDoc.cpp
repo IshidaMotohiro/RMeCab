@@ -114,7 +114,7 @@ extern "C" {
 // // </ 2005 11 08>
 				
 
-			SET_STRING_ELT(my_char2, 0, mkCharCE(p, (utf8locale)?CE_UTF8:CE_NATIVE));  // 形態素情報をセット	
+			SET_STRING_ELT(my_char2, 0, mkCharCE(p, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));  // 形態素情報をセット	
 				
 				
 				PROTECT(my_char = allocVector(STRSXP,1));          // pa++; 3
@@ -141,7 +141,7 @@ extern "C" {
 // 					//					SET_STRING_ELT(my_char, 0, mkChar(buf1));//buf1//入力語形をセット
 //   // </ 2005 11 08>
 					
-					SET_STRING_ELT(my_char, 0, mkCharCE(buf1, (utf8locale)?CE_UTF8:CE_NATIVE));
+					SET_STRING_ELT(my_char, 0, mkCharCE(buf1, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 					
 
 				  }else if (p!=NULL){
@@ -159,7 +159,7 @@ extern "C" {
 //   // </ 2005 11 08>
 
 					
-				SET_STRING_ELT(my_char, 0, mkCharCE(p, (utf8locale)?CE_UTF8:CE_NATIVE));//原型をセット
+				SET_STRING_ELT(my_char, 0, mkCharCE(p, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));//原型をセット
 				
 					
 				  }
@@ -176,7 +176,7 @@ extern "C" {
 // 				//SET_STRING_ELT(my_char, 0, mkChar(buf1));
 // 					// </ 2005 11 08>
 
-	SET_STRING_ELT(my_char, 0, mkCharCE(buf1, (utf8locale)?CE_UTF8:CE_NATIVE));
+				    SET_STRING_ELT(my_char, 0, mkCharCE(buf1, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 				
 				  }
 				  
@@ -195,7 +195,7 @@ extern "C" {
 // // </ 2005 11 08>
 
 
-				   SET_STRING_ELT(my_char, 0, mkCharCE(buf1, (utf8locale)?CE_UTF8:CE_NATIVE));//
+				   SET_STRING_ELT(my_char, 0, mkCharCE(buf1, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));//
 				  
 				}
 				SET_NAMES(my_char, my_char2);//

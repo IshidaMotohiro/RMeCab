@@ -251,16 +251,16 @@ extern "C"{
 
 
 
-	  SET_STRING_ELT(varlabels, 0, mkCharCE("Term", (utf8locale)?CE_UTF8:CE_NATIVE));
-	  SET_STRING_ELT(varlabels, 1, mkCharCE("Before", (utf8locale)?CE_UTF8:CE_NATIVE));
-	  SET_STRING_ELT(varlabels, 2, mkCharCE("After", (utf8locale)?CE_UTF8:CE_NATIVE));
-	  SET_STRING_ELT(varlabels, 3, mkCharCE("Span", (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(varlabels, 0, mkCharCE("Term", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(varlabels, 1, mkCharCE("Before", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(varlabels, 2, mkCharCE("After", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(varlabels, 3, mkCharCE("Span", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 	  
-	  SET_STRING_ELT(varlabels, 4, mkCharCE("Total", (utf8locale)?CE_UTF8:CE_NATIVE));		 		  
+	  SET_STRING_ELT(varlabels, 4, mkCharCE("Total", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));		 		  
 
 
 	  	  	  ///// 
-	  SET_STRING_ELT(VECTOR_ELT(mydf, 0), n-2, mkCharCE( "[[MORPHEMS]]", (utf8locale)?CE_UTF8:CE_NATIVE));//
+	  SET_STRING_ELT(VECTOR_ELT(mydf, 0), n-2, mkCharCE( "[[MORPHEMS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));//
 	  INTEGER(VECTOR_ELT(mydf,1))[n-2] =   beforeN  ; // Before 内タイプ数
 	  INTEGER(VECTOR_ELT(mydf,2))[n-2] =   afterN ; // After 内タイプ数
 	  INTEGER(VECTOR_ELT(mydf,3))[n-2] =   beforeN + afterN ; // 総タイプ数
@@ -278,7 +278,7 @@ extern "C"{
 	  
 	  for( z = 0; pM != mP.end(); z++, pM++){
 
-		SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( (pM->first).c_str(), (utf8locale)?CE_UTF8:CE_NATIVE ));	//<2006 04 18> ターム名の登録
+		SET_STRING_ELT(VECTOR_ELT(mydf, 0), z, mkCharCE( (pM->first).c_str(), CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));	//<2006 04 18> ターム名の登録
 		
 		//	Rprintf("found  = %s : z = %d \n",  (pM->first).c_str()   , z);
 			
@@ -334,7 +334,7 @@ extern "C"{
 //  // </ 2005 11 08>
 
 
-	  SET_STRING_ELT(VECTOR_ELT(mydf, 0), n-1, mkCharCE( "[[TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE)); //<2006 04 18>
+	  SET_STRING_ELT(VECTOR_ELT(mydf, 0), n-1, mkCharCE( "[[TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE)); //<2006 04 18>
 	  INTEGER(VECTOR_ELT(mydf,1))[n-1] =   beforeN;//  before 総トークン数
 	  INTEGER(VECTOR_ELT(mydf,2))[n-1] =   afterN ;// after テキスト総トークン数
 	  INTEGER(VECTOR_ELT(mydf,3))[n-1] =   count ;// テキスト総トークン数
@@ -362,7 +362,7 @@ extern "C"{
 // 		// SET_STRING_ELT(row_names, z, mkChar(labelbuff));
 //   // </ 2005 11 08>
 		
-		SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));		
+		SET_STRING_ELT(row_names, z, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));		
 
 		
 	  }

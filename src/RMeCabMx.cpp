@@ -263,7 +263,7 @@ extern "C" {
 // 	  //  SET_STRING_ELT(vecName, 0, mkChar(buf3));  // 規程頻度以下のトークン数
 //  // </ 2005 11 08>
 
-	SET_STRING_ELT(vecName, 0, mkCharCE(buf3, (utf8locale)?CE_UTF8:CE_NATIVE));   
+	SET_STRING_ELT(vecName, 0, mkCharCE(buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));   
 	  
 	  INTEGER(vecInt)[0] =  0;
 
@@ -279,7 +279,7 @@ extern "C" {
 // 			// SET_STRING_ELT(vecName, 1, mkChar( "[[TOTAL-TOKENS]]" ));
 //  // </ 2005 11 08>
 
-	  SET_STRING_ELT(vecName, 1, mkCharCE( "[[TOTAL-TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE ));
+	  SET_STRING_ELT(vecName, 1, mkCharCE( "[[TOTAL-TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 	  
 	  // テキスト総トークン数をセット
 	  INTEGER(vecInt)[1] =  totalM;
@@ -334,7 +334,7 @@ extern "C" {
 // 		//SET_STRING_ELT(vecName, zz, mkChar((pa->first).c_str() ));  // 形態素情報をセット
 // // </ 2005 11 08>
 
-		SET_STRING_ELT(vecName, zz, mkCharCE((pa->first).c_str(), (utf8locale)?CE_UTF8:CE_NATIVE ));
+		SET_STRING_ELT(vecName, zz, mkCharCE((pa->first).c_str(), CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 		
 		
 		INTEGER(vecInt)[zz] =   (pa->second);
@@ -361,7 +361,7 @@ extern "C" {
 // 	//SET_STRING_ELT(vecName, 0, mkChar(buf3));  // 規程頻度以下のトークン数
 //  // </ 2005 11 08>
 
-	  SET_STRING_ELT(vecName, 0, mkCharCE(buf3, (utf8locale)?CE_UTF8:CE_NATIVE)); 
+	  SET_STRING_ELT(vecName, 0, mkCharCE(buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE)); 
 	  
 	  INTEGER(vecInt)[0] =  mF;
 
@@ -376,7 +376,7 @@ extern "C" {
 // 		//SET_STRING_ELT(vecName, 1, mkChar( "[[TOTAL-TOKENS]]" ));
 //  // </ 2005 11 08>
 
-	  	SET_STRING_ELT(vecName, 1, mkCharCE( "[[TOTAL-TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE ));	 	
+	  	SET_STRING_ELT(vecName, 1, mkCharCE( "[[TOTAL-TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));	 	
 	  
 	  // テキスト総トークン数をセット
 	  INTEGER(vecInt)[1] =  totalM;
@@ -404,7 +404,7 @@ extern "C" {
 // 		 //SET_STRING_ELT(vecName, zz  , mkChar(buf3));  // 規程頻度以下のトークン数
 //  // </ 2005 11 08>
 
-	  SET_STRING_ELT(vecName, zz  , mkCharCE(buf3, (utf8locale)?CE_UTF8:CE_NATIVE));	
+	  SET_STRING_ELT(vecName, zz  , mkCharCE(buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	
 
 	  
 	  INTEGER(vecInt)[zz] =  mF;
@@ -421,7 +421,7 @@ extern "C" {
 // 	 // SET_STRING_ELT(vecName, zz+1  , mkChar(  "[[TOTAL-TOKENS]]"  ));  //// テキスト総トークン数をセット
 //  // </ 2005 11 08>
 
-	   SET_STRING_ELT(vecName, zz+1  , mkCharCE(  "[[TOTAL-TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE  )); 	
+	   SET_STRING_ELT(vecName, zz+1  , mkCharCE(  "[[TOTAL-TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  )); 	
 	  
 	  INTEGER(vecInt)[zz+1] =  totalM;
 	  
@@ -443,7 +443,7 @@ extern "C" {
 // 	//SET_STRING_ELT(vecName, zz-1 , mkChar(buf3));  // 規程頻度以下のトークン数
 //   // </ 2005 11 08>
 
-	  SET_STRING_ELT(vecName, zz-1 , mkCharCE(buf3, (utf8locale)?CE_UTF8:CE_NATIVE));	
+	  SET_STRING_ELT(vecName, zz-1 , mkCharCE(buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	
 	  
 	  INTEGER(vecInt)[zz-1] =  mF;
 
@@ -459,7 +459,7 @@ extern "C" {
 // 		//SET_STRING_ELT(vecName, zz , mkChar(  "[[TOTAL-TOKENS]]"  ));  //// テキスト総トークン数をセット
 //  // </ 2005 11 08>
 
-	  SET_STRING_ELT(vecName, zz , mkCharCE(  "[[TOTAL-TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE  ));	 	
+	  SET_STRING_ELT(vecName, zz , mkCharCE(  "[[TOTAL-TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  ));	 	
 	  
 	  
 	  INTEGER(vecInt)[zz] =  totalM;
@@ -481,7 +481,7 @@ extern "C" {
 // 		// SET_STRING_ELT(vecName, zz  , mkChar(buf3));   // 規程頻度以下のトークン数
 //  // </ 2005 11 08>
 	  
-	  SET_STRING_ELT(vecName, zz  , mkCharCE(buf3, (utf8locale)?CE_UTF8:CE_NATIVE));	 	
+	  SET_STRING_ELT(vecName, zz  , mkCharCE(buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));	 	
 	  
 	  
 	  INTEGER(vecInt)[zz] =  mF;
@@ -497,7 +497,7 @@ extern "C" {
 // 	 //SET_STRING_ELT(vecName, zz+1  , mkChar(  "[[TOTAL-TOKENS]]"  ));  //// テキスト総トークン数をセット
 //   // </ 2005 11 08>
 
-	  SET_STRING_ELT(vecName, zz+1  , mkCharCE(  "[[TOTAL-TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE  ));  
+	  SET_STRING_ELT(vecName, zz+1  , mkCharCE(  "[[TOTAL-TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  ));  
 
 	  
 	  INTEGER(vecInt)[zz+1] =  totalM;
@@ -517,7 +517,7 @@ extern "C" {
 // // </ 2005 11 08>
 
 	  
-	  SET_STRING_ELT(vecName, zz, mkCharCE(buf3, (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(vecName, zz, mkCharCE(buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 	  
 	  INTEGER(vecInt)[zz] =  mF;
 	  
@@ -532,7 +532,7 @@ extern "C" {
 // 	 //  SET_STRING_ELT(vecName, zz+1, mkChar( "[[TOTAL-TOKENS]]" ));  // テキスト総トークン数をセット
 //   // </ 2005 11 08>
 
-	 SET_STRING_ELT(vecName, zz+1, mkCharCE( "[[TOTAL-TOKENS]]", (utf8locale)?CE_UTF8:CE_NATIVE )); 		 
+	 SET_STRING_ELT(vecName, zz+1, mkCharCE( "[[TOTAL-TOKENS]]", CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE )); 		 
 
 	 
 	  INTEGER(vecInt)[zz+1] =  totalM;

@@ -276,7 +276,7 @@ extern "C" {
 // 	  // SET_STRING_ELT(col_names, i, mkChar(buf3 ));
 //  // </ 2005 11 08>
 
-	  SET_STRING_ELT(col_names, i, mkCharCE(buf3 , (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(col_names, i, mkCharCE(buf3 , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 	  
 	  pma0++;
 	  // if(i % 10 == 0) Rprintf("* ");// 2006 03 27 removed 2007 05
@@ -301,7 +301,7 @@ extern "C" {
 // 	  // SET_STRING_ELT(row_names, i, mkChar( buf3 ));
 //   // </ 2005 11 08>
 	  
-	  SET_STRING_ELT(row_names, i, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));	
+	  SET_STRING_ELT(row_names, i, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));	
 
 	  
 	}

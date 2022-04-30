@@ -501,7 +501,7 @@ extern "C" {
 // 	  // SET_STRING_ELT(col_names, i, mkChar(buf3 ));
 //   // </ 2005 11 08>
 
-	  SET_STRING_ELT(col_names, i, mkCharCE(buf3 , (utf8locale)?CE_UTF8:CE_NATIVE));		
+	  SET_STRING_ELT(col_names, i, mkCharCE(buf3 , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));		
 	  
 	  pma0++;
 	}
@@ -526,7 +526,7 @@ extern "C" {
 // 	  // SET_STRING_ELT(row_names, file, mkChar( buf3 ));
 //   // </ 2005 11 08>
 
-	  SET_STRING_ELT(row_names, file, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));	
+	  SET_STRING_ELT(row_names, file, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));	
 	  
 	}
 

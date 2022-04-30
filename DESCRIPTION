@@ -1,13 +1,13 @@
 Package: RMeCab
 Type: Package
 Title: interface to MeCab
-Version: 1.07
-Date: 2021-02-24 PM 15:00
+Version: 1.08
+Date: 2022-04-29 PM 17:00
 Author: Motohiro Ishida[aut, cre], Taku Kudo [aut]
 Maintainer: Motohiro Ishida <ishida.motohiro@gmail.com>
-Description: parsing Japanese texts with mecab-0.996 / R-4.0.3
+Description: parsing Japanese texts with mecab-0.996 / R-4.2.0
 License: GPL | LGPL | BSD
-Depends: R (>= 4.0.0)
+Depends: R (>= 4.2.0)
 SystemRequirements:
     MeCab 0.996
     GNU make

@@ -6,17 +6,16 @@
 # CXXFLAGS += "-fpermissive -std=c++98"
 
 MECAB = -lmecab
-MECAB64 = -lmecab64
-
-
-
-ifeq "$(WIN)" "64"
-     PKG_LIBS = -L../src-x64 $(MECAB64)# value for 64-bit Windows
-else
-     PKG_LIBS = -L../src-i386 $(MECAB)# value for 32-bit Windows
-     endif
-
+# MECAB64 = -lmecab64
+PKG_LIBS = -L../src $(MECAB)
 PKG_CPPFLAGS = -I.
+
+
+# ifeq "$(WIN)" "64"
+#      PKG_LIBS = -L../src-x64 $(MECAB64)# value for 64-bit Windows
+# else
+#      PKG_LIBS = -L../src-i386 $(MECAB)# value for 32-bit Windows
+#      endif
 
 
 

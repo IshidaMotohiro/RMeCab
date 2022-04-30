@@ -98,7 +98,7 @@ extern "C" {
 // 			  //			  SET_STRING_ELT(my_char, 0, mkChar(buf1));
 // // </ 2005 11 08>
 
-			  SET_STRING_ELT(  my_char  ,  0, mkCharCE( buf1 , (utf8locale)?CE_UTF8:CE_NATIVE  ));
+			  SET_STRING_ELT(  my_char  ,  0, mkCharCE( buf1 , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  ));
 
 			  
 			  //元トークンを冒頭にセット
@@ -124,7 +124,7 @@ extern "C" {
 // 			  // SET_STRING_ELT(my_char, j, mkChar(p));//元トークンを冒頭にセット
 // // </ 2005 11 08>
 
-				SET_STRING_ELT( my_char,  j, mkCharCE( p, (utf8locale)?CE_UTF8:CE_NATIVE  )); 
+				SET_STRING_ELT( my_char,  j, mkCharCE( p, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  )); 
 				
 				p = strtok( NULL,"," );
 				j++;

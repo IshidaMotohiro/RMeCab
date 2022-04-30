@@ -578,7 +578,7 @@ extern "C" {
 //   // </ 2005 11 08>
 
 
-		SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3 , (utf8locale)?CE_UTF8:CE_NATIVE));// < 2006 04 18>
+		SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3 , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));// < 2006 04 18>
 		
 		
 		p = strtok( NULL, "\a");
@@ -644,7 +644,7 @@ extern "C" {
 // 	  // SET_STRING_ELT(varlabels, xx, mkChar( buf3 ));
 //   // </ 2005 11 08>
 
-	  SET_STRING_ELT(varlabels, xx, mkCharCE( buf3 , (utf8locale)?CE_UTF8:CE_NATIVE));		 	
+	  SET_STRING_ELT(varlabels, xx, mkCharCE( buf3 , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));		 	
 	  
 	}
 	
@@ -662,7 +662,7 @@ extern "C" {
 // 	  //SET_STRING_ELT(varlabels, xx, mkChar(f[j++]));
 //   // </ 2005 11 08>
 	  
-	  SET_STRING_ELT(varlabels, xx, mkCharCE(ff[j++].c_str() , (utf8locale)?CE_UTF8:CE_NATIVE));// 2011 03 10 SET_STRING_ELT(varlabels, xx, mkCharCE(f[j++], (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(varlabels, xx, mkCharCE(ff[j++].c_str() , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));// 2011 03 10 SET_STRING_ELT(varlabels, xx, mkCharCE(f[j++], (utf8locale)?CE_UTF8:CE_NATIVE));
 	  
 	}
 		
@@ -690,7 +690,7 @@ extern "C" {
 // 	  // SET_STRING_ELT(row_names, xx, mkChar(labelbuff));
 //   // </ 2005 11 08>
 
-	  SET_STRING_ELT(row_names, xx, mkCharCE(labelbuff, (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(row_names, xx, mkCharCE(labelbuff, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 
 	  
 	}

@@ -68,7 +68,7 @@ return result;
 
 
 
-extern int utf8locale;
+// extern int utf8locale;
 
 
 

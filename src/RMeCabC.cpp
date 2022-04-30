@@ -92,7 +92,7 @@ extern "C" {
 // 		//SET_STRING_ELT(my_char2, 0, mkChar(p));  // 形態素情報をセット
 // 		// </ 2005 11 08>
 
-		 SET_STRING_ELT(my_char2, 0, mkCharCE(p, (utf8locale)?CE_UTF8:CE_NATIVE));
+		 SET_STRING_ELT(my_char2, 0, mkCharCE(p, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 
 		 
 		  PROTECT(my_char = allocVector(STRSXP,1));pa++;// pa++; 3
@@ -118,7 +118,7 @@ extern "C" {
 // 			  // SET_STRING_ELT(my_char, 0, mkChar(buf1));//もとの語形をセット
 // 			  // </ 2005 11 08>
 
-		SET_STRING_ELT(my_char, 0, mkCharCE(buf1, (utf8locale)?CE_UTF8:CE_NATIVE)); 		  
+		SET_STRING_ELT(my_char, 0, mkCharCE(buf1, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE)); 		  
 			  
 			}else if( p != NULL){
 
@@ -135,7 +135,7 @@ extern "C" {
 // 			  // SET_STRING_ELT(my_char, 0, mkChar(p));//原型をセット
 // 			  // </ 2005 11 08>
 
-			  SET_STRING_ELT(my_char, 0, mkCharCE(p, (utf8locale)?CE_UTF8:CE_NATIVE)); 
+			  SET_STRING_ELT(my_char, 0, mkCharCE(p, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE)); 
 
 			  
 			}
@@ -155,7 +155,7 @@ extern "C" {
 // 			// SET_STRING_ELT(my_char, 0, mkChar(buf1));//もとの単語をセット
 // 			// </ 2005 11 08>
 
-		SET_STRING_ELT(my_char, 0, mkCharCE(buf1, (utf8locale)?CE_UTF8:CE_NATIVE)); 			  
+		SET_STRING_ELT(my_char, 0, mkCharCE(buf1, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE)); 			  
 		  }
 		  //p  = NULL;
 		  //	SET_NAMED(my_char, 1);

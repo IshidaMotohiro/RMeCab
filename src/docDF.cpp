@@ -300,7 +300,7 @@ extern "C" {
 // 			SET_VECTOR_ELT(VECTOR_ELT(mydf, 0), xx, mkCharCE( buf3, CE_UTF8 ));
 // #endif
 
-			SET_STRING_ELT(VECTOR_ELT(mydf, 0), xx, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE ));// < 2006 04 18>
+			SET_STRING_ELT(VECTOR_ELT(mydf, 0), xx, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));// < 2006 04 18>
 			
 			//Rprintf("column 0 is finished");
 			// 各ファイルから探し出してその頻度を新規列に追加
@@ -344,7 +344,7 @@ extern "C" {
 // 			  SET_VECTOR_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, CE_UTF8  ));
 // #endif
 
-				SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE  ));// < 2006 04 18>
+				SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  ));// < 2006 04 18>
 			  
 			  //Rprintf("buf3 = %s  \n", buf3); 
 			  i++;
@@ -367,7 +367,7 @@ extern "C" {
 // 			  SET_VECTOR_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, CE_UTF8  ));
 // #endif
 
-				SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, (utf8locale)?CE_UTF8:CE_NATIVE  ));//j列のxx行にセット < 2006 04 18>
+				SET_STRING_ELT(VECTOR_ELT(mydf, j++), xx, mkCharCE( buf3, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE  ));//j列のxx行にセット < 2006 04 18>
 
 		
 			  //str.erase();
@@ -445,7 +445,7 @@ extern "C" {
 // #endif
 
 	  
-	  SET_STRING_ELT(varlabels, 0, mkCharCE( "Ngram",  (utf8locale)?CE_UTF8:CE_NATIVE ));
+	  SET_STRING_ELT(varlabels, 0, mkCharCE( "Ngram",  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 	  
 	  
 	  //Rprintf("first col names set\n");
@@ -465,7 +465,7 @@ extern "C" {
 // #endif
 
 		  
-		  SET_STRING_ELT(varlabels, j+1, mkCharCE(buf4, (utf8locale)?CE_UTF8:CE_NATIVE ));
+		  SET_STRING_ELT(varlabels, j+1, mkCharCE(buf4, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 		  
 		  
 		}else{//ファイルの場合
@@ -480,7 +480,7 @@ extern "C" {
 // #endif
 
 		  
-		  SET_STRING_ELT(varlabels, j+1, mkCharCE(ff[j].c_str(), (utf8locale)?CE_UTF8:CE_NATIVE )); // 2011 03 10 SET_STRING_ELT(varlabels, j+1, mkCharCE(f[j], (utf8locale)?CE_UTF8:CE_NATIVE ));
+		  SET_STRING_ELT(varlabels, j+1, mkCharCE(ff[j].c_str(), CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE )); // 2011 03 10 SET_STRING_ELT(varlabels, j+1, mkCharCE(f[j], (utf8locale)?CE_UTF8:CE_NATIVE ));
 		  
 		}
 	  }
@@ -502,7 +502,7 @@ extern "C" {
 // 			SET_STRING_ELT(varlabels, i, mkCharCE( buf1,  CE_UTF8 ));
 // #endif
 
-			SET_STRING_ELT(varlabels, i, mkCharCE( buf1,  (utf8locale)?CE_UTF8:CE_NATIVE ));
+			SET_STRING_ELT(varlabels, i, mkCharCE( buf1,  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 			
 			
 		  }else if (i ==  (Ngram)){
@@ -516,7 +516,7 @@ extern "C" {
 // 			SET_STRING_ELT(varlabels, i, mkCharCE( "POS1",  CE_UTF8 ));
 // #endif	
 
-			SET_STRING_ELT(varlabels, i, mkCharCE( "POS1",  (utf8locale)?CE_UTF8:CE_NATIVE ));
+			SET_STRING_ELT(varlabels, i, mkCharCE( "POS1",  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 
 			
 		  }else if(i ==  (Ngram +1) ){
@@ -532,7 +532,7 @@ extern "C" {
 // 			//SET_STRING_ELT(varlabels, i, mkCharCE( "POS2",  CE_NATIVE ));
 
 
-			SET_STRING_ELT(varlabels, i, mkCharCE( "POS2",  (utf8locale)?CE_UTF8:CE_NATIVE ));
+			SET_STRING_ELT(varlabels, i, mkCharCE( "POS2",  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 			
 		  }
 		}
@@ -554,9 +554,9 @@ extern "C" {
 // 		SET_STRING_ELT(varlabels, 2, mkCharCE( "POS2",  CE_UTF8 ));
 // #endif
 
-		SET_STRING_ELT(varlabels, 0, mkCharCE( "TERM",  (utf8locale)?CE_UTF8:CE_NATIVE ));
-		SET_STRING_ELT(varlabels, 1, mkCharCE( "POS1",  (utf8locale)?CE_UTF8:CE_NATIVE ));
-		SET_STRING_ELT(varlabels, 2, mkCharCE( "POS2",  (utf8locale)?CE_UTF8:CE_NATIVE ));
+		SET_STRING_ELT(varlabels, 0, mkCharCE( "TERM",  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
+		SET_STRING_ELT(varlabels, 1, mkCharCE( "POS1",  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
+		SET_STRING_ELT(varlabels, 2, mkCharCE( "POS2",  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 
 		
 	  }
@@ -579,7 +579,7 @@ extern "C" {
 // 			SET_STRING_ELT(varlabels, Ngram + 2 + j, mkCharCE( buf4,  CE_UTF8 ));
 // #endif
 
-		SET_STRING_ELT(varlabels, Ngram + 2 + j, mkCharCE( buf4,  (utf8locale)?CE_UTF8:CE_NATIVE ));
+		SET_STRING_ELT(varlabels, Ngram + 2 + j, mkCharCE( buf4,  CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 
 		
 		  } else{// Ngram 本体は一つでまとまり
@@ -594,7 +594,7 @@ extern "C" {
 // 		  SET_STRING_ELT(varlabels,  3 + j, mkCharCE(buf4, CE_UTF8 ));
 // #endif
 
-			SET_STRING_ELT(varlabels, 3+ j, mkCharCE(buf4, (utf8locale)?CE_UTF8:CE_NATIVE ));
+			SET_STRING_ELT(varlabels, 3+ j, mkCharCE(buf4, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 
 		  
 		  }
@@ -616,7 +616,7 @@ extern "C" {
 // #endif
 
 			
-	SET_STRING_ELT(varlabels, Ngram + 2 + j, mkCharCE(buf4, (utf8locale)?CE_UTF8:CE_NATIVE ));
+	SET_STRING_ELT(varlabels, Ngram + 2 + j, mkCharCE(buf4, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 			
 		  }else{
 
@@ -630,7 +630,7 @@ extern "C" {
 // #endif
 
 			
-			SET_STRING_ELT(varlabels, 3 + j, mkCharCE(buf4, (utf8locale)?CE_UTF8:CE_NATIVE ));
+			SET_STRING_ELT(varlabels, 3 + j, mkCharCE(buf4, CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE ));
 
 			
 		  }
@@ -662,7 +662,7 @@ extern "C" {
 // 	  SET_STRING_ELT(row_names, xx, mkCharCE(labelbuff , CE_UTF8));
 // #endif
 
-	  SET_STRING_ELT(row_names, xx, mkCharCE(labelbuff , (utf8locale)?CE_UTF8:CE_NATIVE));
+	  SET_STRING_ELT(row_names, xx, mkCharCE(labelbuff , CE_UTF8));// (utf8locale)?CE_UTF8:CE_NATIVE));
 	  
 	  //Rprintf("set row %d\n", xx+1 );
 	}

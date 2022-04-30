@@ -1,3 +1,4 @@
+/*   ver 1.08 2022 04 30 */
 
 #include "RMeCab.h"
 

@@ -122,9 +122,12 @@ SEXP setMeCabMap(int typeSet, char input[], map<string, int> & ma0, 	map<string,
 			  //						Rprintf("in for\n");
 			  //						Rprintf("str %s\n", * iter);
 			  target.append( *iter);
+			  
 			  if(xx < Ngram){
-				 target.append("\a");//target.append("-");
+			    target.append("-");// target.append("\a");//
 			  }
+			  
+			  
 			  xx++;
 			  //					  Rprintf("xx = %d\n", xx);
 						

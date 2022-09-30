@@ -17,9 +17,9 @@ entropy <-
     if(tp == 1){
       # m <- removeInfo ( m ) 
       gf = colSums(m, na.rm = TRUE)  # 大域的頻度 F_i
-      p = m / gf                     # 各出現頻度 / 大域頻度
+      p = t(m) / gf                     # 各出現頻度 / 大域頻度
       ndocs = nrow(m)                #文書数（行側に文章）
-      entropy = - colSums( (p*log(p)) / log(ndocs), na.rm = TRUE )
+      entropy = - rowSums( (p*log(p)) / log(ndocs), na.rm = TRUE )
     }else {
       m <- removeInfo ( m ) 
       gf = rowSums(m, na.rm = TRUE)  # 大域的頻度 F_i
@@ -110,7 +110,7 @@ globalEntropy <-
   function(m, tp=0) {
 #    m <- removeInfo ( m )
     
-    return ( (1 - entropy( m )) )
+    return ( (1 - entropy(m, tp = tp)) )
   }
 
 

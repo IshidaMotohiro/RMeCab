@@ -106,7 +106,7 @@ docMatrix2 <-
         }else if(argW[i] == "idf2"){
           dtm <- dtm * globalIDF2(dtm)
         }else if(argW[i] == "idf3"){
-          dtm <- dtm * globalIDF2(dtm)
+          dtm <- dtm * globalIDF3(dtm)
         }else if(argW[i] == "idf4"){
           dtm <- dtm * globalEntropy(dtm)
         } else if(argW[i] == "norm"){

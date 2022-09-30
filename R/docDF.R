@@ -148,9 +148,9 @@ docDF <-
                                         #dtm <- dtm * globalIDF2(dtm)
         }else if(argW[i] == "idf3"){
           if(type == 0){
-            dtm[,(colN+1):ncol(dtm)]  <-   dtm[,(colN+1):ncol(dtm)]*globalIDF2(dtm[, (colN+1):ncol(dtm)])
+            dtm[,(colN+1):ncol(dtm)]  <-   dtm[,(colN+1):ncol(dtm)]*globalIDF3(dtm[, (colN+1):ncol(dtm)])
           }else{
-            dtm[,(colN+3):ncol(dtm)]  <-   dtm[,(colN+3):ncol(dtm)]*globalIDF2(dtm[, (colN+3):ncol(dtm)])
+            dtm[,(colN+3):ncol(dtm)]  <-   dtm[,(colN+3):ncol(dtm)]*globalIDF3(dtm[, (colN+3):ncol(dtm)])
           }
                                         #dtm <- dtm * globalIDF2(dtm)
         }else if(argW[i] == "idf4"){

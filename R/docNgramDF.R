@@ -107,7 +107,7 @@ docNgramDF <-
         }else if(argW[i] == "idf2"){
           dtm <- dtm * globalIDF2(dtm , tp =1)
         }else if(argW[i] == "idf3"){
-          dtm <- dtm * globalIDF2(dtm , tp =1)
+          dtm <- dtm * globalIDF3(dtm , tp =1)
         }else if(argW[i] == "idf4"){
           dtm <- dtm * globalEntropy(dtm , tp =1)
         } else if(argW[i] == "norm"){

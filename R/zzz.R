@@ -17,5 +17,5 @@
 .onAttach <- function(libname, pkgname)
 {
     if(.Platform$OS.type == "windows")
-        packageStartupMessage("You need 64 bit version of MeCab for Winndows, with UTF8 dictionary\nDowlnload it from 'https://github.com/ikegami-yukino/mecab/releases/tag/v0.996'")
+        packageStartupMessage("You need 64 bit version of MeCab with UTF8 dictionary on Windows.\nDowlnload it from 'https://github.com/ikegami-yukino/mecab/releases'\uninstall old 32 bit MeCab and install new 64 bit MeCab")
   }

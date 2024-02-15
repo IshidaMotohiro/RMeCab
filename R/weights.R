@@ -11,17 +11,17 @@
 ####################################
 #
 # 以下は行に単語という前提で計算する
-# 
+#
 entropy <-
   function (m, tp=0) {
     if(tp == 1){
-      # m <- removeInfo ( m ) 
+      # m <- removeInfo ( m )
       gf = colSums(m, na.rm = TRUE)  # 大域的頻度 F_i
       p = t(m) / gf                     # 各出現頻度 / 大域頻度
       ndocs = nrow(m)                #文書数（行側に文章）
       entropy = - rowSums( (p*log(p)) / log(ndocs), na.rm = TRUE )
     }else {
-      m <- removeInfo ( m ) 
+      m <- removeInfo ( m )
       gf = rowSums(m, na.rm = TRUE)  # 大域的頻度 F_i
       p = m / gf                     # 各出現頻度 / 大域頻度
       ndocs = ncol(m)                #文書数（列側に文章）
@@ -36,20 +36,20 @@ entropy <-
 # binary weights
 localBin <-
   function(m) {
-    m <- removeInfo ( m ) 
+    m <- removeInfo ( m )
     return( (m>0)*1 )
   }
 
 # termfrequency
 localTF <-
   function(m) {
-    m <- removeInfo ( m ) 
+    m <- removeInfo ( m )
     return( m )
   }
 
 # log'ed termfrequency
 localLogTF <- function(m) {
-  m <- removeInfo ( m ) 
+  m <- removeInfo ( m )
   return( log(m+1) )
 }
 
@@ -62,7 +62,7 @@ localLogTF <- function(m) {
 globalIDF <-
   function(m, tp=0) {
 
-#    m <- removeInfo ( m ) 
+#    m <- removeInfo ( m )
 #    df = rowSums(localBin(m), na.rm=TRUE)
 #    return ( log2(ncol(m)/df)  )
     if(tp == 1){
@@ -92,24 +92,22 @@ globalIDF2 <-
 
 # probabilistic IDF
 globalIDF3 <-
-  function(m, tp=0) {
-#     m <- removeInfo ( m )
-    if(tp == 1){
-      df <- colSums(localBin( m ), na.rm=TRUE)# 各単語を含む文書数 (文書頻度)
-      return ( log2 ( nrow( m - df) /df  ) )# 行側に文書
-      
-    }else{
-      df <- rowSums(localBin( m ), na.rm=TRUE)# 各単語を含む文書数 (文書頻度)
-      return ( log2 ( ncol( removeInfo(m) - df) /df  ) )
+  function(m, tp = 0) {
+    if (tp == 1) {
+      df <- colSums(localBin(m), na.rm = TRUE) # 各単語を含む文書数 (文書頻度)
+      return(log2((nrow(m) - df) / df)) # 行側に文書
+    } else {
+      m <- removeInfo(m)
+      df <- rowSums(localBin(m), na.rm = TRUE) # 各単語を含む文書数 (文書頻度)
+      return(log2((ncol(m) - df) / df))
     }
-    
   }
 
 # global weighting = 1 + entropy
 globalEntropy <-
   function(m, tp=0) {
 #    m <- removeInfo ( m )
-    
+
     return ( (1 - entropy(m, tp = tp)) )
   }
 
@@ -120,7 +118,7 @@ globalNorm <-
     if(tp == 1){
       return ( 1 / sqrt( rowSums(( m*m ), na.rm = TRUE) ) )# 各行をノルムで割る
     }else{
-      m <- removeInfo ( m ) 
+      m <- removeInfo ( m )
       return ( 1 / sqrt( colSums(( m*m ), na.rm = TRUE) ) )# 各列をノルムで割る
     }
   }
@@ -144,7 +142,7 @@ removeInfo <-
 
     if(length(grep1) == 0 & length(grep2) == 0) {
       return (m)
-    } else{ 
+    } else{
       return( m [-c(grep1, grep2), ]  )
     }
     return(m)

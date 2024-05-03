@@ -58,7 +58,7 @@ char kigo[128];
 ////////////////////////////////////////////////
 
 // extern "C" {
-  
+//  const char meisi_utf8[] = u8"名詞";
 char  * meisiCode(){
     const char  meisi_utf8[]  =  {static_cast<char>(0xe5),
 				  static_cast<char>(0x90),
@@ -84,6 +84,7 @@ char  * meisiCode(){
 // ishida@ishida-ubuntu8:~$ echo -n '形容詞' | hexdump -C
 // 00000000  e5 bd a2 e5 ae b9 e8 a9  9e                       |.........|
 // 00000009
+// const char meisi_utf8[] = u8"形容詞";
 char  * keiyouCode(){
   //    SEXP res;
   const char  keiyou_utf8[]  =  {static_cast<char>(0xe5),
@@ -110,6 +111,7 @@ char  * keiyouCode(){
   return keiyou;
 }
 ///////////////////////////////////////////////////////////////////
+// const char kigo_utf8[] = u8"記号";
 char  * kigoCode(){
     const char  kigo_utf8[]  =  {static_cast<char>(0xe8),
 				 static_cast<char>(0xa8),

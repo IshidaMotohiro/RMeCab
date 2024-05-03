@@ -18,3 +18,5 @@ src/setMeCabMap.o
 src/symbols.rds
 inst/libs/i386/libmecab.dll
 inst/libs/x64/libmecab.dll
+.vscode
+

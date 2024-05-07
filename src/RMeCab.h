@@ -99,7 +99,7 @@ extern char  * kigoCode();
 #define CHECK(eval) if (! eval) { \
     fprintf (stderr, "Exception:%s\n", mecab_strerror (mecab)); \
     mecab_destroy(mecab); \
-    return (SEXP) -1; }
+    return (SEXP) ScalarInteger(-1); }
 ///////////////////////////////////////////////////////////////
 
 // extern "C" {

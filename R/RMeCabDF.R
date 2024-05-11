@@ -39,7 +39,7 @@ RMeCabDF <-
       # stop("line number %d include non-characters!", i)
         kekka[[i]] <- NA
       }else{
-        kekka[[i]] <- unlist(RMeCabC(dataf[i,coln,drop=T], mypref, dic, mecabrc, etc))# 
+        kekka[[i]] <- unlist(RMeCabC(dataf[i,coln,drop=TRUE], mypref, dic, mecabrc, etc))# 
       }
     }
     return(kekka)

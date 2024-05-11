@@ -48,7 +48,7 @@ docDF <-
 #    gc()
     if(is.data.frame(target)){
       ft <- 2# データフレームのある列
-      fileN = length(target[, column, drop = T]  )
+      fileN = length(target[, column, drop = TRUE]  )
       if( fileN < 1){
         stop("data frame must be equal to or larger than 1 ")      
       }else{

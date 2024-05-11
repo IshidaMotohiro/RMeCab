@@ -52,7 +52,7 @@ docDF <-
       if( fileN < 1){
         stop("data frame must be equal to or larger than 1 ")      
       }else{
-        file <- as.vector( target[, column, drop = T] )
+        file <- as.vector( target[, column, drop = TRUE] )
       }
     }  else  if(any(suppressWarnings(dir(target) ) > 0)){
       ft <- 1 ##ディレクトリが指定された

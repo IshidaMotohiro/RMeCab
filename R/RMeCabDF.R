@@ -33,7 +33,7 @@ RMeCabDF <-
 ##       stop("the second argument must be integer")
 ##     }
 ## #    gc()
-    kekka <- list(length(dataf[,coln,drop=T]))
+    kekka <- list(length(dataf[,coln,drop=TRUE]))
     for(i in 1:length(dataf[,coln,drop=T])){
       if( is.na(dataf[i,coln,drop=T])  ||  dataf[i, coln, drop = T] == ""){## if( !is.factor(dataf[i,coln]) || is.na(dataf[i,coln])  ||  dataf[i, coln] == ""){
       # stop("line number %d include non-characters!", i)

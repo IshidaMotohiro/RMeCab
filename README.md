@@ -55,7 +55,7 @@ unlist (res)
 
 MeCabのインストールから始めたいという方は、以下のサイトで、自身のOSに対応したセクションの解説を参照してください。
 
-http://sites.google.com/site/rmecab/ でも説明しています。
+https://rmecab.jp/new/ でも説明しています。
 
 
 ## Neologd 辞書

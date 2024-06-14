@@ -28,7 +28,7 @@
 #include <Rdefines.h>
 #include <Rinternals.h>
 #include <R_ext/Riconv.h>
-
+#undef length 
 //#include <dirent.h>
 //#include <sys/types.h>
 //#include <sys/stat.h>
